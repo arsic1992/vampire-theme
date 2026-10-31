@@ -1,1 +1,103 @@
+/* ==========================================================
+   VAMPIRE THEME - vampire-min.css
+   1. Tokens (dark default, light = aged parchment)
+   2. Base
+   3. index_box
+   ========================================================== */
 
+/* 1. TOKENS ------------------------------------------------ */
+:root{
+--vt-bg:#0b0709;--vt-surface:#150d10;--vt-surface2:#1d1216;--vt-line:#3a1a22;
+--vt-blood:#b3122b;--vt-blood-hot:#e11d3f;--vt-gold:#c9a25a;
+--vt-text:#e9dfd6;--vt-muted:#a08f8a;
+--vt-shadow:0 8px 24px rgba(0,0,0,.55);--vt-glow:rgba(225,29,63,.35);
+--vt-radius:12px;--vt-w-stat:76px;--vt-w-last:300px;
+--vt-font-display:Cinzel,"Cormorant Garamond",Georgia,serif;
+color-scheme:dark}
+:root[data-theme="light"]{
+--vt-bg:#efe4cf;--vt-surface:#f7efdd;--vt-surface2:#ecdfc4;--vt-line:#cdb78f;
+--vt-blood:#8e1020;--vt-blood-hot:#a8152a;--vt-gold:#7a5a1c;
+--vt-text:#2a1a17;--vt-muted:#6b5a50;
+--vt-shadow:0 6px 18px rgba(80,50,20,.2);--vt-glow:rgba(168,21,42,.25);
+color-scheme:light}
+
+/* 2. BASE -------------------------------------------------- */
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--vt-bg);color:var(--vt-text)}
+a{color:var(--vt-gold);text-decoration:none;transition:color .2s}
+a:hover{color:var(--vt-blood-hot)}
+
+/* 3. INDEX_BOX --------------------------------------------- */
+
+/* quick-link rails */
+.vt-rail-list{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .5rem;list-style:none;margin:0;padding:0}
+.vt-rail--top{margin:0 0 .9rem}
+.vt-rail--foot{margin:.9rem 0 0}
+.vt-rail-item a{display:block;padding:.35rem .85rem;border:1px solid var(--vt-line);border-radius:999px;background:var(--vt-surface);font-size:.8rem}
+.vt-rail-item a:hover{border-color:var(--vt-blood-hot);box-shadow:0 0 12px var(--vt-glow)}
+.vt-rail-list .rightside{margin-left:auto}
+
+/* crypt = category card */
+.vt-crypt{margin:0 0 1.25rem;border:1px solid var(--vt-line);border-radius:var(--vt-radius);background:var(--vt-surface);box-shadow:var(--vt-shadow);overflow:hidden}
+.vt-crypt-inner{display:flex;flex-direction:column}
+.vt-crypt-head{display:flex;align-items:center;padding:.8rem 1rem;background:linear-gradient(90deg,color-mix(in srgb,var(--vt-blood) 35%,var(--vt-surface2)),var(--vt-surface2) 60%);border-bottom:2px solid var(--vt-blood);text-transform:uppercase;letter-spacing:.12em;font-family:var(--vt-font-display);font-size:.78rem}
+.vt-crypt-ornament{flex:none;width:.9rem;height:.9rem;margin-right:.7rem;background:var(--vt-blood-hot);clip-path:polygon(0 0,100% 0,50% 100%);filter:drop-shadow(0 0 6px var(--vt-blood-hot))}
+.vt-crypt-title{flex:1;min-width:0;font-weight:700;color:var(--vt-text)}
+.vt-crypt-title h2{margin:0;font:inherit;letter-spacing:inherit}
+.vt-crypt-cols{display:flex;align-items:center;flex:none;color:var(--vt-muted);font-size:.7rem}
+.vt-col--topics,.vt-col--posts{width:var(--vt-w-stat);text-align:center}
+.vt-col--last{width:var(--vt-w-last);padding-left:.75rem}
+.vt-crypt-seal{display:block;height:3px;background:linear-gradient(90deg,transparent,var(--vt-blood),transparent)}
+
+/* chamber = forum row */
+.vt-chambers{display:flex;flex-direction:column}
+.vt-chamber{position:relative;display:flex;align-items:center;padding:.8rem 1rem;padding-inline-start:calc(var(--lvl,10px) + .5rem);border-top:1px solid var(--vt-line);transition:background .2s}
+.vt-chamber:first-child{border-top:0}
+.vt-chamber::before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--vt-blood-hot);opacity:0;transition:opacity .2s}
+.vt-chamber:hover{background:var(--vt-surface2)}
+.vt-chamber:hover::before{opacity:1}
+
+.vt-sigil{flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-right:.9rem;border:1px solid var(--vt-line);border-radius:50%;background:var(--vt-surface2)}
+.vt-sigil-icon{width:28px;height:28px;background:center/contain no-repeat;filter:hue-rotate(150deg) saturate(1.3)}
+
+.vt-chamber-main{flex:1;min-width:0;margin-right:var(--lvl-r,0);padding-right:.75rem;display:flex;flex-direction:column;gap:.15rem}
+.vt-chamber-title{margin:0;font-family:var(--vt-font-display);font-size:1.05rem;line-height:1.25}
+.vt-chamber-title a{color:var(--vt-text)}
+.vt-chamber-title a:hover{color:var(--vt-blood-hot)}
+.vt-chamber-desc,.vt-chamber-mods,.vt-chamber-links,.vt-chamber-subs{font-size:.82rem;color:var(--vt-muted);line-height:1.4}
+.vt-chamber-desc:empty,.vt-chamber-links:empty{display:none}
+.vt-chamber-subs:not(:has(a)){display:none}
+.vt-chamber-subs strong{color:var(--vt-text);font-weight:600}
+
+/* vitals = topics / posts */
+.vt-vitals{display:flex;flex:none}
+.vt-vital{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem;width:var(--vt-w-stat);text-align:center}
+.vt-vital-num{font-family:var(--vt-font-display);font-size:1.15rem;font-weight:700;color:var(--vt-blood-hot)}
+.vt-vital dfn{display:none;font-style:normal;font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--vt-muted)}
+
+/* last post */
+.vt-last{flex:none;display:flex;align-items:center;gap:.65rem;width:var(--vt-w-last);min-width:0;padding-left:.75rem;border-left:1px solid var(--vt-line);font-size:.78rem;color:var(--vt-muted)}
+.vt-last-ad{display:flex;align-items:center;gap:.65rem}
+.vt-last-face{flex:none;display:block}
+.vt-last-face img{display:block;width:40px;height:40px;object-fit:cover;border-radius:50%;border:2px solid var(--vt-blood);max-width:none!important;max-height:none!important}
+.vt-last-body{display:block;min-width:0;line-height:1.45}
+.vt-last-topic{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+.vt-last-topic:empty{display:none}
+.vt-last:not(:has(.vt-last-topic:not(:empty))):not(:has(.AD_LastPA))::after{content:"\2014";opacity:.5}
+.vt-last .last-post-icon{display:inline-block;vertical-align:middle;margin-left:.25rem}
+.vt-last .group-icon{font-style:normal}
+
+/* gallery block */
+.vt-gallery{display:flex;flex-wrap:wrap;gap:.5rem;padding:1rem;overflow:auto}
+.vt-gallery img{max-width:100%;border-radius:8px}
+
+/* mobile */
+@media(max-width:760px){
+.vt-crypt-cols{display:none}
+.vt-chamber{flex-wrap:wrap;row-gap:.6rem}
+.vt-chamber-main{flex:1 1 calc(100% - 70px)}
+.vt-vitals{order:3;gap:.5rem;margin-left:calc(44px + .9rem)}
+.vt-vital{flex-direction:row;gap:.35rem;width:auto;padding:.2rem .65rem;border:1px solid var(--vt-line);border-radius:999px}
+.vt-vital dfn{display:block}
+.vt-last{order:4;width:100%;padding:.6rem 0 0;border-left:0;border-top:1px dashed var(--vt-line)}
+}
