@@ -416,6 +416,60 @@ img.sprite-icon_topic_latest{width:16px;height:16px;vertical-align:-3px;object-f
 }
 @media(prefers-reduced-motion:reduce){.vt-banner-wing{animation:none!important}}
 
+/* 7. PATCH: obvious state icons + pager tools -------------- */
+:root{
+--vt-cream:linear-gradient(160deg,#fff7e4,#f6dfa6);
+--ic-check:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E")}
+
+/* bigger hex, inner fill follows the state */
+.vt-thread .vt-sigil{width:60px;height:69px}
+.vt-thread .vt-sigil-icon{width:32px;height:32px}
+.vt-thread .vt-sigil::after,.vt-rune .vt-sigil::after{background:var(--inner,var(--vt-surface))}
+
+/* topics: a different main icon per state (types come last so they win) */
+.vt-thread[data-icon*="unread"]{--ic:var(--ic-drop)}
+.vt-thread[data-icon*="hot"]{--ic:var(--ic-flame)}
+.vt-thread[data-icon*="locked"]{--ic:var(--ic-lock)}
+.vt-thread[data-icon*="sticky"]{--ic:var(--ic-ribbon)}
+.vt-thread[data-icon*="announce"]{--ic:var(--ic-bell)}
+.vt-thread[data-icon*="global"],.vt-thread[data-icon*="tu48"]{--ic:var(--ic-crown)}
+/* topics: solid hex colours (hot = gold, locked = grey, new = red; new wins) */
+.vt-thread[data-icon*="hot"]{--ic-fill:var(--vt-cream);--inner:linear-gradient(160deg,var(--vt-gold-hot),var(--vt-gold))}
+.vt-thread[data-icon*="locked"]{--ic-fill:var(--vt-cream);--inner:linear-gradient(160deg,#9b8b81,#6f5d52)}
+.vt-thread[data-icon*="unread"]{--ic-fill:var(--vt-cream);--inner:linear-gradient(160deg,var(--vt-blood-hot),var(--vt-blood))}
+/* the small badges are not needed any more, except a lock on locked announcements / stickies / globals */
+.vt-thread[data-icon] .vt-badge--hot,.vt-thread[data-icon] .vt-badge--lock{display:none}
+.vt-thread[data-icon*="locked"]:is([data-icon*="announce"],[data-icon*="sticky"],[data-icon*="global"],[data-icon*="tu48"]) .vt-badge--lock{display:block}
+
+/* legend runes: same icons and colours as the topics */
+.vt-rune .vt-sigil{width:52px;height:60px}
+.vt-rune .vt-sigil-icon{width:28px;height:28px}
+.vt-rune--unread{--ic:var(--ic-drop)}
+.vt-rune--hot{--ic:var(--ic-flame)}
+.vt-rune--locked{--ic:var(--ic-lock)}
+.vt-rune--sticky{--ic:var(--ic-ribbon)}
+.vt-rune--announce{--ic:var(--ic-bell)}
+.vt-rune--global{--ic:var(--ic-crown)}
+.vt-rune--hot{--ic-fill:var(--vt-cream);--inner:linear-gradient(160deg,var(--vt-gold-hot),var(--vt-gold))}
+.vt-rune--locked{--ic-fill:var(--vt-cream);--inner:linear-gradient(160deg,#9b8b81,#6f5d52)}
+.vt-rune--unread{--ic-fill:var(--vt-cream);--inner:linear-gradient(160deg,var(--vt-blood-hot),var(--vt-blood))}
+.vt-rune .vt-badge{display:none!important}
+
+/* pager tools: equal pills with icons, round back-to-top button */
+.vt-pager .vt-pager-tools a{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:2.1rem;padding:.3rem .95rem;border:1px solid var(--vt-line);border-radius:999px 999px 999px 4px;background:var(--vt-surface);box-shadow:0 2px 0 var(--vt-line);color:var(--vt-text);font-family:inherit;font-size:.8rem;font-weight:600;line-height:1.2;text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .2s}
+.vt-pager .vt-pager-tools a:hover{border-color:var(--vt-blood-hot);box-shadow:0 0 14px var(--vt-glow);color:var(--vt-blood-hot);transform:translateY(-1px)}
+.vt-pager-tools a:not(.vt-totop)::before{content:"";flex:none;width:.9rem;height:.9rem;background:var(--vt-blood-hot);-webkit-mask:var(--ic-check) center/contain no-repeat;mask:var(--ic-check) center/contain no-repeat}
+.vt-pager-watch a::before{-webkit-mask-image:var(--ic-eye)!important;mask-image:var(--ic-eye)!important;background:var(--vt-gold)!important}
+.vt-pager .vt-pager-tools a.vt-totop{position:relative;width:2.1rem;min-height:0;height:2.1rem;padding:0;border-color:var(--vt-blood);border-radius:50%;background:linear-gradient(160deg,var(--vt-blood-hot),var(--vt-blood));color:var(--vt-head-text)}
+.vt-pager .vt-pager-tools a.vt-totop:hover{color:var(--vt-head-text)}
+.vt-totop::before{width:1.05rem;height:1.05rem}
+.vt-totop img{position:absolute;inset:0;width:100%;height:100%;opacity:0}
+
+@media(max-width:720px){
+.vt-thread .vt-sigil{width:50px;height:58px}
+.vt-thread .vt-sigil-icon{width:27px;height:27px}
+}
+
 /* motion */
 @keyframes vt-pulse{0%,100%{filter:drop-shadow(0 0 0 transparent)}50%{filter:drop-shadow(0 0 9px var(--vt-blood-hot))}}
 @keyframes vt-ooze{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.18)}}
