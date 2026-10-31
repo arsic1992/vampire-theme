@@ -470,6 +470,19 @@ img.sprite-icon_topic_latest{width:16px;height:16px;vertical-align:-3px;object-f
 .vt-thread .vt-sigil-icon{width:27px;height:27px}
 }
 
+/* 8. PATCH: buttons + pager hover (beat legacy button2 / link rules) */
+input.vt-btn,input.button2.vt-btn{-webkit-appearance:none;appearance:none;display:inline-flex;align-items:center;justify-content:center;width:auto!important;height:auto!important;min-width:0;margin:0;padding:.6rem 1.4rem!important;border:0!important;border-radius:999px 4px 999px 4px!important;background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display)!important;font-size:.72rem!important;font-weight:700!important;line-height:1.2;letter-spacing:.18em;text-transform:uppercase;text-shadow:none!important;box-shadow:0 4px 12px var(--vt-glow)!important;cursor:pointer;transition:transform .2s,box-shadow .2s,filter .2s}
+input.vt-btn:hover,input.button2.vt-btn:hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 8px 20px var(--vt-glow)!important}
+input.vt-btn:active{transform:translateY(0)}
+input.vt-btn:focus-visible{outline:2px solid var(--vt-gold-hot);outline-offset:2px}
+input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!important;font-size:.66rem!important}
+
+/* pager pills: filled blood hover, no underline, icon turns cream */
+.vt-pager .vt-pager-tools a:not(.vt-totop):hover{background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;border-color:var(--vt-blood)!important;color:var(--vt-head-text)!important;text-decoration:none!important;box-shadow:0 6px 16px var(--vt-glow)!important;transform:translateY(-1px)}
+.vt-pager-tools a:not(.vt-totop):hover::before{background:var(--vt-head-text)!important}
+.vt-pager .vt-pager-tools a.vt-totop:hover{background:linear-gradient(160deg,var(--vt-blood-hot),var(--vt-blood))!important;box-shadow:0 6px 16px var(--vt-glow)!important;text-decoration:none!important;transform:translateY(-2px)}
+.vt-pager-pages a:hover{background:linear-gradient(160deg,var(--vt-blood-hot),var(--vt-blood))!important;border-color:var(--vt-blood)!important;color:var(--vt-head-text)!important;text-decoration:none!important}
+
 /* motion */
 @keyframes vt-pulse{0%,100%{filter:drop-shadow(0 0 0 transparent)}50%{filter:drop-shadow(0 0 9px var(--vt-blood-hot))}}
 @keyframes vt-ooze{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.18)}}
