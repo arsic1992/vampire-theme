@@ -771,3 +771,29 @@ input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!im
 .vt-likes .fa_like_list::before{content:"";flex:none;width:.85rem;height:.85rem;background:var(--vt-blood-hot);-webkit-mask:var(--ic-heart) center/contain no-repeat;mask:var(--ic-heart) center/contain no-repeat}
 .vt-likes .fa_like_list a{font-weight:700;color:var(--vt-blood-hot)}
 .vt-likes .fa_like_list a:hover{color:var(--vt-gold-hot);text-decoration:none}
+
+/* 15. PATCH viewtopic: heart hover + social contact icons (matched by link, not by order) */
+:root{
+--ic-fb:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2C16.7 2.2 15.8 2 14.7 2 12.4 2 10.8 3.4 10.8 6v2.5H8v3.4h2.8V22H14V11.9h2.6l.4-3.4z'/%3E%3C/svg%3E");
+--ic-x:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17.8 3h3L14.2 10.6 22 21h-6.1l-4.8-6.3L5.6 21h-3l7-8.1L2 3h6.3l4.3 5.8zm-1 16.2h1.7L7.3 4.7H5.5z'/%3E%3C/svg%3E");
+--ic-pin:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-3.8 19.3c-.1-.8-.2-2.1 0-3l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.2-1.9 3.2-4.6 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.7 2.3.1.1.1.2.1.3l-.3 1.1c0 .2-.2.2-.4.1-1.300-.6-2-2.400-2-3.900 0-3.100 2.300-6 6.500-6 3.400 0 6.100 2.400 6.100 5.700 0 3.400-2.100 6.100-5.100 6.100-1 0-2-.5-2.300-1.100l-.6 2.300c-.2.800-.8 1.900-1.200 2.500A10 10 0 1 0 12 2z'/%3E%3C/svg%3E");
+--ic-phone:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11.400 11.400 0 0 0 3.600.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1c0 1.300.2 2.500.6 3.600a1 1 0 0 1-.3 1z'/%3E%3C/svg%3E")}
+.vt-contacts a[href^="/u"]::before{-webkit-mask-image:var(--ic-user);mask-image:var(--ic-user)}
+.vt-contacts a[href*="privmsg"]::before{-webkit-mask-image:var(--ic-chat);mask-image:var(--ic-chat)}
+.vt-contacts a[href*="mode=email"],.vt-contacts a[href^="mailto"]{--k:1}
+.vt-contacts a[href*="mode=email"]::before,.vt-contacts a[href^="mailto"]::before{-webkit-mask-image:var(--ic-mail);mask-image:var(--ic-mail)}
+.vt-contacts a[href^="http"]::before{-webkit-mask-image:var(--ic-globe);mask-image:var(--ic-globe)}
+.vt-contacts a[href*="facebook."]::before{-webkit-mask-image:var(--ic-fb);mask-image:var(--ic-fb)}
+.vt-contacts a:is([href*="twitter."],[href*="//x.com"],[href*="//www.x.com"])::before{-webkit-mask-image:var(--ic-x);mask-image:var(--ic-x)}
+.vt-contacts a[href*="pinterest."]::before{-webkit-mask-image:var(--ic-pin);mask-image:var(--ic-pin)}
+.vt-contacts a[href^="skype"]::before{-webkit-mask-image:var(--ic-phone);mask-image:var(--ic-phone)}
+.vt-contacts a[href*="facebook."]:hover{background:#1877f2;border-color:#1877f2}
+.vt-contacts a:is([href*="twitter."],[href*="//x.com"]):hover{background:#111;border-color:#111}
+.vt-contacts a[href*="pinterest."]:hover{background:#c8232c;border-color:#c8232c}
+.vt-contacts a[href^="skype"]:hover{background:#0a8fd6;border-color:#0a8fd6}
+/* heart hover: tool button + like button */
+.vt-post .vt-tools .vt-tool--thank:hover::before{background:var(--vt-head-text)!important}
+.vt-post .vt-tools .vt-tool--thank:hover{--c:var(--vt-head-text)!important}
+.vt-post .vt-likes .rep-button:hover{color:var(--vt-head-text)!important}
+.vt-post .vt-likes .rep-button:hover::before{background:var(--vt-head-text)!important}
+.vt-post .vt-likes .rep-button:hover span{color:inherit}
