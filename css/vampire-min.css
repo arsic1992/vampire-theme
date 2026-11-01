@@ -994,3 +994,10 @@ input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!im
 .sceditor-container iframe,.sceditor-container textarea{display:block;min-height:220px!important}
 .sceditor-container textarea[style*="display: none"],.sceditor-container iframe[style*="display: none"]{display:none!important}
 .sceditor-grip{position:absolute;right:2px;bottom:2px}
+
+/* 22. PATCH sceditor: better icons for Host an image + Embed */
+:root{
+--ic-cloudup:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 18a4.500 4.500 0 0 1-.5-9A6 6 0 0 1 18 9.500a4.200 4.200 0 0 1-.5 8.500M12 21v-8M8.500 15.500L12 12l3.500 3.500'/%3E%3C/svg%3E");
+--ic-embed:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5h18v14H3zM3 9h18M10 12.500l-2 2 2 2M14 12.500l2 2-2 2'/%3E%3C/svg%3E")}
+.sceditor-button-servimg::before{-webkit-mask-image:var(--ic-cloudup);mask-image:var(--ic-cloudup)}
+.sceditor-button-embed::before{-webkit-mask-image:var(--ic-embed);mask-image:var(--ic-embed)}
