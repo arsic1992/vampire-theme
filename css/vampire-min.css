@@ -724,3 +724,15 @@ input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!im
 .vt-vote .vote-bar-minus{background:linear-gradient(180deg,var(--vt-blood-hot),var(--vt-blood))!important}
 .vt-vote .vote-no-bar{font-size:.7rem;letter-spacing:.1em;color:var(--vt-muted)}
 .vt-vote .vote-button{float:none;margin:0}
+
+/* 12. PATCH viewtopic: compact stats list + fx-score reputation chip */
+.vt-post .vt-stats{display:block;flex:0 1 auto;max-width:none;column-width:auto;column-count:1;min-width:130px;line-height:1.9}
+.vt-post .vt-stats br{display:revert;flex:none;height:auto}
+.vt-post .vt-stats .label{margin-right:.15rem}
+.vt-body:has(.fx-score){flex-direction:column;gap:.7rem}
+.vt-post .vt-vote:has(.fx-score){flex-direction:row;width:auto;align-self:flex-start;padding:0;border:0;background:none}
+.vt-vote .vote-bar.fx-score{display:inline-flex;flex-direction:row;align-items:center;gap:.35rem;width:auto;min-height:0;height:auto;padding:.22rem;overflow:visible;border:1px solid var(--vt-line);border-radius:999px;background:var(--vt-surface)}
+.fx-score__up,.fx-score__down{display:inline-flex;align-items:center;padding:.22rem .8rem;border-radius:999px;font-family:var(--vt-font-display);font-size:.74rem;font-weight:700;letter-spacing:.06em;line-height:1.2}
+.fx-score__up{background:color-mix(in srgb,var(--vt-gold-hot) 24%,var(--vt-surface));color:var(--vt-gold)}
+.fx-score__down{background:color-mix(in srgb,var(--vt-blood-hot) 16%,var(--vt-surface));color:var(--vt-blood-hot)}
+.fx-score__up.is-zero,.fx-score__down.is-zero{background:var(--vt-surface2);color:var(--vt-muted)}
