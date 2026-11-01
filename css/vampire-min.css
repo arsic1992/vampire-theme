@@ -824,3 +824,23 @@ input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!im
 .vt-post .vt-vote:has(.fx-score) .fx-score{order:2}
 .vt-post .vt-vote:has(.fx-score) .vote-button:first-child{order:1}
 .vt-vote .fx-score__up,.vt-vote .fx-score__down{white-space:nowrap}
+
+/* 17. PATCH hovers: icon must stay above the hover fill; link hovers; empty crumbs */
+.vt-post .vt-tools .vt-tool a,.vt-post .vt-tools .vt-tool a:hover{background:none!important;box-shadow:none!important;transform:none!important}
+.vt-post .vt-tools .vt-tool::before{position:relative;z-index:1}
+.vt-post .vt-tools .vt-tool:hover::before,.vt-post .vt-tools .vt-tool:hover{--c:#fff}
+.vt-post .vt-tools .vt-tool:hover::before,.vt-post .vt-tools .vt-tool:has(img[src*="multiquote_on"])::before{background:#fff!important}
+.vt-answers .vt-reply a:hover::before,.vt-answers .vt-ghost a:hover::before{background:#fff!important}
+.vt-answers .vt-reply a:hover,.vt-answers .vt-ghost a:hover{color:#fff!important}
+.vt-contacts a:hover::before{background:#fff!important}
+.vt-post .vt-likes .rep-button:hover::before{background:#fff!important}
+.vt-post .vt-likes .rep-button:hover{color:#fff!important}
+/* names and author links */
+.vt-post .vt-name a,.vt-post .vt-post-author>a{color:var(--vt-blood)!important;font-weight:700;text-decoration:none!important;padding-bottom:2px;background:linear-gradient(90deg,var(--vt-gold-hot),var(--vt-blood-hot)) no-repeat 0 100%/0 2px;transition:background-size .3s,color .2s,text-shadow .2s}
+.vt-post .vt-name a:hover,.vt-post .vt-post-author>a:hover{color:var(--vt-blood-hot)!important;background-size:100% 2px;text-shadow:0 0 12px var(--vt-glow)}
+.vt-post .vt-name a:hover span,.vt-post .vt-post-author>a:hover span{filter:brightness(1.15) saturate(1.2)}
+/* breadcrumbs */
+.vt-crumbs a:empty{display:none}
+.vt-crumbs a.nav{color:var(--vt-blood)!important;font-weight:600;text-decoration:none!important;transition:color .2s}
+.vt-crumbs a.nav:hover{color:var(--vt-gold-hot)!important}
+.vt-crumbs a.nav:hover::before{background:var(--vt-gold-hot)}
