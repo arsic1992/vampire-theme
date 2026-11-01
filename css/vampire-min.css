@@ -797,3 +797,30 @@ input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!im
 .vt-post .vt-likes .rep-button:hover{color:var(--vt-head-text)!important}
 .vt-post .vt-likes .rep-button:hover::before{background:var(--vt-head-text)!important}
 .vt-post .vt-likes .rep-button:hover span{color:inherit}
+
+/* 16. PATCH viewtopic: thank hover (old gif must never show), awards dropdown, vote counter */
+.vt-post .vt-tools .vt-tool img,.vt-post .vt-tools .vt-tool a:hover img,.vt-post .vt-tools .vt-tool img:hover,.vt-contacts a:hover img{opacity:0!important;filter:none!important;visibility:visible}
+.vt-post .vt-tools .vt-tool a:hover{opacity:1!important}
+/* awards */
+.vt-post .vt-ident .vt-awards{display:block;width:100%;max-width:340px}
+.vt-awards-box{display:block}
+.vt-awards-sum{display:inline-flex;align-items:center;gap:.5rem;padding:.2rem .35rem .2rem .85rem;border:1px solid var(--vt-gold);border-radius:999px 4px 999px 4px;background:var(--vt-surface);color:var(--vt-gold);font-family:var(--vt-font-display);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;list-style:none;cursor:pointer;user-select:none;transition:background .2s,color .2s}
+.vt-awards-sum::-webkit-details-marker{display:none}
+.vt-awards-sum::marker{content:""}
+.vt-awards-count{display:inline-flex;align-items:center;justify-content:center;min-width:1.4rem;height:1.4rem;padding:0 .35rem;border-radius:99px;background:linear-gradient(160deg,var(--vt-blood-hot),var(--vt-blood));color:var(--vt-head-text);font-size:.68rem;letter-spacing:0}
+.vt-awards-sum::after{content:"";width:.7rem;height:.7rem;margin-right:.4rem;background:currentColor;-webkit-mask:var(--ic-chevron) center/contain no-repeat;mask:var(--ic-chevron) center/contain no-repeat;transition:transform .25s}
+.vt-awards-box[open] .vt-awards-sum::after{transform:rotate(180deg)}
+.vt-awards-sum:hover{background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c));color:var(--vt-head-text)}
+.vt-awards-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem;padding:.7rem;max-height:210px;overflow-y:auto;border:1px solid var(--vt-line);border-radius:12px;background:var(--vt-surface);box-shadow:inset 0 0 0 3px var(--vt-surface2)}
+.vt-awards-list .award{position:relative;flex:none;width:38px!important;height:38px!important;min-width:0;margin:0!important;padding:0!important;border:2px solid var(--vt-gold)!important;border-radius:50%!important;background:var(--vt-surface2) var(--award-image) center/70% no-repeat!important;box-shadow:0 2px 6px var(--vt-glow);cursor:help}
+.vt-awards-list .award::before,.vt-awards-list .award::after{content:none!important}
+.vt-awards-list .award_tooltiptext{position:absolute;left:50%;bottom:calc(100% + 8px);z-index:99;width:max-content;max-width:210px;padding:.5rem .7rem;border:1px solid var(--vt-gold);border-radius:10px;background:var(--vt-surface);box-shadow:var(--vt-shadow);color:var(--vt-text);font-size:.74rem;line-height:1.4;text-align:left;transform:translateX(-50%);visibility:hidden!important;opacity:0;pointer-events:none;transition:opacity .15s}
+.vt-awards-list .award:hover .award_tooltiptext{visibility:visible!important;opacity:1}
+.vt-awards-list .award_tooltiptext_title{margin-bottom:.15rem;font-family:var(--vt-font-display);font-weight:700;letter-spacing:.08em;color:var(--vt-blood)}
+/* vote: + [ ▲ n  ▼ n ] − as one row, on the right */
+.vt-post .vt-vote:has(.fx-score){flex-direction:row;align-items:center;gap:.5rem}
+.vt-post .vt-vote:has(.fx-score) .vote-button a{width:1.9rem;height:1.9rem}
+.vt-post .vt-vote:has(.fx-score) .vote-button:last-child{order:3}
+.vt-post .vt-vote:has(.fx-score) .fx-score{order:2}
+.vt-post .vt-vote:has(.fx-score) .vote-button:first-child{order:1}
+.vt-vote .fx-score__up,.vt-vote .fx-score__down{white-space:nowrap}
