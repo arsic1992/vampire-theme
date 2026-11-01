@@ -736,3 +736,27 @@ input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!im
 .fx-score__up{background:color-mix(in srgb,var(--vt-gold-hot) 24%,var(--vt-surface));color:var(--vt-gold)}
 .fx-score__down{background:color-mix(in srgb,var(--vt-blood-hot) 16%,var(--vt-surface));color:var(--vt-blood-hot)}
 .fx-score__up.is-zero,.fx-score__down.is-zero{background:var(--vt-surface2);color:var(--vt-muted)}
+
+/* 13. PATCH viewtopic: tool buttons are the <li> itself (fixes full-post overlay), vote on the right */
+.vt-post .vt-tools .vt-tool{position:relative!important;display:inline-flex!important;align-items:center;justify-content:center;width:2.2rem!important;height:2.2rem!important;border:1px solid var(--vt-line)!important;border-radius:10px 3px 10px 3px!important;background:var(--vt-surface)!important;--c:var(--vt-gold);transition:background .2s,transform .2s,box-shadow .2s}
+.vt-post .vt-tools .vt-tool::before{content:"";width:1.05rem;height:1.05rem;background:var(--c);pointer-events:none;-webkit-mask:var(--ic-star) center/contain no-repeat;mask:var(--ic-star) center/contain no-repeat;transition:background .2s}
+.vt-post .vt-tools .vt-tool--thank{--c:var(--vt-blood-hot)}
+.vt-post .vt-tools .vt-tool--thank::before{-webkit-mask-image:var(--ic-drop);mask-image:var(--ic-drop)}
+.vt-post .vt-tools .vt-tool--mq::before{-webkit-mask-image:var(--ic-plus);mask-image:var(--ic-plus)}
+.vt-post .vt-tools .vt-tool--quote::before{-webkit-mask-image:var(--ic-quote);mask-image:var(--ic-quote)}
+.vt-post .vt-tools .vt-tool--edit{--c:var(--vt-blood)}
+.vt-post .vt-tools .vt-tool--edit::before{-webkit-mask-image:var(--ic-edit);mask-image:var(--ic-edit)}
+.vt-post .vt-tools .vt-tool--delete{--c:var(--vt-muted)}
+.vt-post .vt-tools .vt-tool--delete::before{-webkit-mask-image:var(--ic-trash);mask-image:var(--ic-trash)}
+.vt-post .vt-tools .vt-tool--ip{--c:var(--vt-muted)}
+.vt-post .vt-tools .vt-tool--ip::before{-webkit-mask-image:var(--ic-eye);mask-image:var(--ic-eye)}
+.vt-post .vt-tools .vt-tool--report{--c:var(--vt-blood-hot)}
+.vt-post .vt-tools .vt-tool--report::before{-webkit-mask-image:var(--ic-flag);mask-image:var(--ic-flag)}
+.vt-post .vt-tools .vt-tool a{position:absolute!important;inset:0;width:auto!important;height:auto!important;border:0!important;border-radius:inherit!important;background:none!important}
+.vt-post .vt-tools .vt-tool a::before{content:none!important}
+.vt-post .vt-tools .vt-tool img{position:absolute!important;inset:0;z-index:2;display:block!important;width:100%!important;height:100%!important;margin:0!important;opacity:0;cursor:pointer}
+.vt-post .vt-tools .vt-tool:hover,.vt-post .vt-tools .vt-tool:has(img[src*="multiquote_on"]){background:linear-gradient(160deg,var(--vt-blood-hot),var(--vt-blood))!important;border-color:var(--vt-blood)!important;--c:var(--vt-head-text);transform:translateY(-2px);box-shadow:0 6px 14px var(--vt-glow)}
+.vt-post .vt-tools .vt-tool--mq:has(img[src*="multiquote_on"])::before{-webkit-mask-image:var(--ic-check);mask-image:var(--ic-check)}
+/* reputation to the right */
+.vt-post .vt-body>.vt-vote{order:2}
+.vt-post .vt-body:has(.fx-score)>.vt-vote{order:-1;align-self:flex-end}
