@@ -760,3 +760,14 @@ input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!im
 /* reputation to the right */
 .vt-post .vt-body>.vt-vote{order:2}
 .vt-post .vt-body:has(.fx-score)>.vt-vote{order:-1;align-self:flex-end}
+
+/* 14. PATCH viewtopic: thank = heart, hover always visible, like list */
+:root{--ic-heart:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-8.5-5.4-8.5-11.6A4.9 4.9 0 0 1 12 6.8a4.9 4.9 0 0 1 8.5 2.6C20.5 15.6 12 21 12 21z'/%3E%3C/svg%3E")}
+.vt-post .vt-tools .vt-tool--thank{--c:var(--vt-blood)}
+.vt-post .vt-tools .vt-tool--thank::before{-webkit-mask-image:var(--ic-heart);mask-image:var(--ic-heart)}
+.vt-post .vt-tools .vt-tool:hover::before,.vt-post .vt-tools .vt-tool:has(img[src*="multiquote_on"])::before{background:var(--vt-head-text)!important}
+.vt-likes .rep-button::before{-webkit-mask-image:var(--ic-heart);mask-image:var(--ic-heart)}
+.vt-likes .fa_like_list{display:inline-flex;align-items:center;gap:.45rem;margin:0;padding:.3rem .85rem;border:1px solid var(--vt-line);border-radius:999px;background:var(--vt-surface2);font-size:.76rem;color:var(--vt-muted);line-height:1.3}
+.vt-likes .fa_like_list::before{content:"";flex:none;width:.85rem;height:.85rem;background:var(--vt-blood-hot);-webkit-mask:var(--ic-heart) center/contain no-repeat;mask:var(--ic-heart) center/contain no-repeat}
+.vt-likes .fa_like_list a{font-weight:700;color:var(--vt-blood-hot)}
+.vt-likes .fa_like_list a:hover{color:var(--vt-gold-hot);text-decoration:none}
