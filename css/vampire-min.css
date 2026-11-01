@@ -508,3 +508,20 @@ input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!im
 .vt-lower>.vt-watch,.vt-lower .vt-crypt{flex-basis:100%}
 .vt-pane{padding:1.8rem .7rem 1rem}
 }
+
+/* 9. PATCH: Actions popup (#plus_menu) – anchored under the button, styled, on top */
+.vt-pager,.vt-pager-tools{overflow:visible}
+.vt-pager:not(.vt-pager--foot){position:relative;z-index:60}
+.vt-pager-tools{position:relative;z-index:60}
+.vt-pager-tools #plus_menu{position:absolute!important;left:auto!important;right:0!important;top:100%!important;margin:.55rem 0 0!important;z-index:9999!important;width:min(380px,calc(100vw - 2rem))!important;max-width:none;padding:0!important;overflow:hidden;background:var(--vt-surface)!important;border:1px solid var(--vt-gold)!important;border-radius:var(--vt-radius)!important;box-shadow:0 18px 40px var(--vt-glow),0 0 0 4px color-mix(in srgb,var(--vt-gold) 18%,transparent)!important;color:var(--vt-text);text-align:left;animation:vt-pop .22s ease-out}
+.vt-pager-tools #plus_menu .title-overview{display:block;margin:0!important;padding:.75rem 1rem!important;background:linear-gradient(100deg,var(--vt-head-a),var(--vt-head-b) 55%,var(--vt-head-c))!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;text-align:center;border:0!important;box-shadow:inset 0 -2px 0 var(--vt-gold-hot)}
+.vt-pager-tools #plus_menu .title-overview strong{color:inherit;font-weight:700}
+.vt-pager-tools #plus_menu .left-overview{display:block;margin:0!important;padding:.6rem!important;background:none!important;border:0!important}
+.vt-pager-tools #plus_menu .left-overview strong{display:flex;flex-direction:column;gap:.25rem;font-weight:400}
+.vt-pager-tools #plus_menu br{display:none}
+.vt-pager-tools #plus_menu hr.dashed{height:0;margin:0 .8rem!important;border:0!important;border-top:1px dashed var(--vt-gold)!important;background:none!important;opacity:.7}
+.vt-pager .vt-pager-tools #plus_menu a{display:flex;align-items:center;gap:.6rem;width:100%;margin:0!important;padding:.55rem .8rem!important;background:transparent!important;border:0!important;border-radius:8px!important;box-shadow:none!important;color:var(--vt-text)!important;font-family:var(--vt-font-body,inherit);font-size:.86rem!important;font-weight:600;letter-spacing:.02em;text-transform:none;text-decoration:none!important;transform:none;transition:background .2s,color .2s,padding .2s}
+.vt-pager .vt-pager-tools #plus_menu a:hover{background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;color:var(--vt-head-text)!important;padding-left:1.1rem!important;box-shadow:0 4px 12px var(--vt-glow)!important;transform:none}
+.vt-pager-tools #plus_menu a::before{flex:none;background:var(--vt-blood)!important}
+.vt-pager-tools #plus_menu a:hover::before{background:var(--vt-head-text)!important}
+@keyframes vt-pop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
