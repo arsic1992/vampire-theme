@@ -700,3 +700,27 @@ input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!im
 .vt-tools{margin-left:0}
 .vt-actionbar--topic .vt-pager,.vt-actionbar--foot .vt-pager--foot{flex-basis:100%}
 }
+
+/* 11. PATCH viewtopic: stats list, tool icons, like button, reputation vote */
+.vt-post .vt-stats{display:block;flex:1 1 240px;max-width:520px;column-width:150px;column-gap:1.6rem;line-height:1.8;font-weight:700;font-size:.88rem;color:var(--vt-blood);text-align:left}
+.vt-post .vt-stats br{display:inline;flex:none;height:auto}
+.vt-post .vt-stats .label,.vt-post .vt-stats .label span{display:inline;color:var(--vt-muted)!important;font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+.vt-post .vt-stats a{color:var(--vt-blood-hot)}
+.vt-post .vt-tools{position:static!important;float:none!important;display:flex!important;flex-wrap:wrap;gap:.4rem;width:auto!important;height:auto!important;margin:0 0 0 auto!important;padding:0!important;background:none!important;border:0!important}
+.vt-post .vt-tools .vt-tool{display:inline-flex!important;float:none!important;width:auto!important;height:auto!important;margin:0!important;padding:0!important;border:0!important;background:none!important}
+.vt-post .vt-tools .vt-tool:empty{display:none!important}
+.vt-post .vt-tools .vt-tool a{position:relative!important;display:inline-flex!important;align-items:center;justify-content:center;float:none!important;width:2.2rem!important;height:2.2rem!important;margin:0!important;padding:0!important;overflow:hidden;border:1px solid var(--vt-line)!important;border-radius:10px 3px 10px 3px!important;background:var(--vt-surface)!important;font-size:0!important;text-indent:0!important;line-height:0}
+.vt-post .vt-tools .vt-tool a img{position:absolute!important;inset:0;display:block!important;width:100%!important;height:100%!important;max-width:none!important;margin:0!important;padding:0!important;opacity:0;background:none!important;cursor:pointer}
+.vt-post .vt-tools .vt-tool a:hover{background:linear-gradient(160deg,var(--vt-blood-hot),var(--vt-blood))!important;border-color:var(--vt-blood)!important}
+.vt-likes .rep-button::before{content:"";width:.85rem;height:.85rem;background:currentColor;-webkit-mask:var(--ic-drop) center/contain no-repeat;mask:var(--ic-drop) center/contain no-repeat}
+.vt-likes .rep-button[data-href*="like_val=4"]::before,.vt-likes .rep-button.fa_dislike::before{-webkit-mask-image:var(--ic-down);mask-image:var(--ic-down)}
+.vt-likes .rep-button{border-radius:999px!important;padding:.4rem 1rem!important}
+.vt-likes .rep-nb{font-weight:800;color:var(--vt-blood)}
+/* reputation (+ / bar / -) */
+.vt-post .vt-vote{display:flex;flex-direction:column;align-items:center;gap:.45rem;flex:none;width:2.4rem;padding:.4rem 0;border:1px solid var(--vt-line);border-radius:999px;background:var(--vt-surface2)}
+.vt-vote .vote-bar{display:flex;flex-direction:column;justify-content:center;gap:2px;width:.45rem;min-height:2.4rem;padding:0;border-radius:99px;background:var(--vt-line);overflow:hidden;float:none}
+.vt-vote .vote-bar-plus,.vt-vote .vote-bar-minus{width:100%!important;float:none;margin:0;border-radius:99px}
+.vt-vote .vote-bar-plus{background:linear-gradient(180deg,var(--vt-gold-hot),var(--vt-gold))!important}
+.vt-vote .vote-bar-minus{background:linear-gradient(180deg,var(--vt-blood-hot),var(--vt-blood))!important}
+.vt-vote .vote-no-bar{font-size:.7rem;letter-spacing:.1em;color:var(--vt-muted)}
+.vt-vote .vote-button{float:none;margin:0}
