@@ -984,3 +984,13 @@ input.vt-btn.vt-btn--sm,input.button2.vt-btn.vt-btn--sm{padding:.5rem 1.15rem!im
 .sceditor-mention-user:hover{background:var(--vt-blood)!important;color:#fff!important}
 @media(max-width:720px){.sceditor-group{flex-wrap:wrap}.vt-quick{padding:1rem .8rem}}
 .sceditor-button-source::before{-webkit-mask-image:var(--ic-doc);mask-image:var(--ic-doc)}
+
+/* 21. PATCH sceditor: legacy hides button text (text-indent / font-size) -> glyph buttons vanished; editor height */
+.sceditor-button{text-indent:0!important;font-size:1rem!important;line-height:1!important;letter-spacing:0!important;overflow:visible!important}
+.sceditor-button::before{text-indent:0!important;text-transform:none;visibility:visible!important;opacity:1!important}
+.sceditor-button-bold::before,.sceditor-button-italic::before,.sceditor-button-underline::before,.sceditor-button-strike::before,.sceditor-button-headers::before,.sceditor-button-size::before,.sceditor-button-font::before,.sceditor-button-mention::before{display:block;color:var(--vt-blood)!important;font-size:1rem!important}
+.sceditor-button:hover::before,.sceditor-button.active::before{color:#fff!important}
+.sceditor-container{height:auto!important}
+.sceditor-container iframe,.sceditor-container textarea{display:block;min-height:220px!important}
+.sceditor-container textarea[style*="display: none"],.sceditor-container iframe[style*="display: none"]{display:none!important}
+.sceditor-grip{position:absolute;right:2px;bottom:2px}
