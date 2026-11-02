@@ -1466,7 +1466,7 @@ body#phpbb>#page-header.vt-hero{position:relative;display:block;box-sizing:borde
 .vt-nav-left #fa_left img,.vt-nav-left #fa_left svg{flex:none;width:1rem!important;height:1rem!important;max-width:none}
 .vt-nav-left #fa_left :is(span,i,em,b){color:inherit!important;font-size:inherit!important}
 @media(max-width:760px){.vt-nav-left #fa_left{display:none!important}}
-/* 35b. #fa_icon is an empty link whose picture only existed inside the toolbar: draw our own */
+/* 35b. #fa_icon keeps its ORIGINAL picture (the header script copies the toolbar's background image onto it) */
 .vt-nav-left #fa_left{gap:.5rem}
-.vt-nav-left #fa_left a#fa_icon{display:inline-block!important;flex:none;width:1.15rem!important;height:1.15rem!important;min-width:1.15rem;margin:0!important;padding:0!important;background:var(--vt-head-text)!important;background-image:none!important;-webkit-mask:var(--ic-globe) center/contain no-repeat;mask:var(--ic-globe) center/contain no-repeat;transition:background .2s,transform .2s}
-.vt-nav-left #fa_left a#fa_icon:hover{background:var(--vt-gold-hot)!important;transform:rotate(15deg)}
+.vt-nav-left #fa_left a#fa_icon{display:inline-block!important;flex:none;min-width:1rem;margin:0!important;padding:0!important;background-color:transparent!important;background-repeat:no-repeat;-webkit-mask:none;mask:none;transition:transform .2s}
+.vt-nav-left #fa_left a#fa_icon:hover{transform:rotate(-8deg) scale(1.08)}
