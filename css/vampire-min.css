@@ -1461,8 +1461,8 @@ body#phpbb>#page-header.vt-hero{position:relative;display:block;box-sizing:borde
 /* 35. "Forumotion" link (#fa_left) moved from the toolbar into the navbar, right of the theme switch */
 .vt-nav-left{gap:.8rem}
 .vt-nav-left #fa_left{position:static!important;float:none!important;display:flex!important;align-items:center;width:auto!important;height:auto!important;margin:0!important;padding:0!important;border:0!important;background:none!important;line-height:1}
-.vt-nav-left #fa_left a{display:inline-flex!important;align-items:center;gap:.45rem;height:auto!important;margin:0!important;padding:.4rem .85rem!important;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(0,0,0,.18)!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display);font-size:.62rem!important;font-weight:700;letter-spacing:.12em;line-height:1.2;text-indent:0!important;text-transform:uppercase;text-decoration:none!important;white-space:nowrap;transition:background .2s,border-color .2s,transform .2s}
-.vt-nav-left #fa_left a:hover{border-color:var(--vt-gold-hot);background:rgba(255,255,255,.16)!important;transform:translateY(-1px)}
+.vt-nav-left #fa_left a{display:inline-flex!important;align-items:center;gap:.45rem;height:auto!important;margin:0!important;padding-top:.4rem!important;padding-bottom:.4rem!important;padding-right:.5rem!important;border:0!important;border-radius:999px;background-color:transparent!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display);font-size:.62rem!important;font-weight:700;letter-spacing:.12em;line-height:1.2;text-transform:uppercase;text-decoration:none!important;white-space:nowrap;transition:opacity .2s,transform .2s}
+.vt-nav-left #fa_left a:hover{background-color:transparent!important;opacity:.85;transform:translateY(-1px)}
 .vt-nav-left #fa_left img,.vt-nav-left #fa_left svg{flex:none;width:1rem!important;height:1rem!important;max-width:none}
 .vt-nav-left #fa_left :is(span,i,em,b){color:inherit!important;font-size:inherit!important}
 @media(max-width:760px){.vt-nav-left #fa_left{display:none!important}}
