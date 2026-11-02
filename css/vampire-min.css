@@ -1451,6 +1451,6 @@ body#phpbb{margin:0!important}
 body#phpbb>#page-header.vt-hero{position:relative;display:block;box-sizing:border-box;width:100%!important;max-width:none!important;height:435px;margin:0!important;padding:0!important;overflow:hidden;border:0!important;background:none!important}
 .vt-hero-content,.vt-hero-brand{display:block;position:static;width:100%;height:100%;max-width:none;margin:0!important;padding:0!important;float:none!important;background:none!important;border:0!important}
 .vt-hero-logo{display:block;width:100%;height:100%;line-height:0}
-.vt-hero-logo img{display:block;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover;object-position:center}
+.vt-hero-logo img{display:block;width:100%!important;height:435px!important;max-width:none!important;max-height:none!important;object-fit:cover;object-position:center}
 .vt-hero-title,.vt-hero-desc{position:absolute!important;width:1px;height:1px;margin:-1px!important;padding:0!important;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 #page-ticker{margin:0 0 .5rem}
