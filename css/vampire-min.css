@@ -1279,3 +1279,33 @@ input.button2.vt-btn.vt-btn--danger{background:linear-gradient(100deg,#3a0610,va
 @media(max-width:720px){.vt-col-from{display:none}.vt-clan-banner{padding:.9rem 1rem}.vt-clan-title{font-size:1.25rem!important}.vt-radio-go{margin-left:0!important}.vt-add-member,.vt-remove-member{width:100%}}
 :root[data-theme="dark"] input.button2.vt-btn.vt-btn--ghost{border-color:var(--vt-blood-hot)!important;color:var(--vt-blood-hot)!important}
 :root[data-theme="dark"] .vt-count-badge,:root[data-theme="dark"] .vt-col-posts,:root[data-theme="dark"] .vt-clan-h,:root[data-theme="dark"] .vt-pending-title{color:var(--vt-blood-hot)!important}
+
+/* 29b. usergroups: compact sizing + solid roster header */
+.vt-clan,.vt-clans{gap:.7rem}
+.vt-clan-banner{margin-bottom:18px;padding:.6rem 1.1rem;gap:.15rem .7rem;border-radius:14px 4px 14px 4px}
+.vt-clan-banner::after{height:16px;-webkit-mask-size:64px 16px;mask-size:64px 16px}
+.vt-clan-sigil{width:1.7rem;height:1.7rem}
+.vt-clan-title{font-size:1.1rem!important;letter-spacing:.08em}
+.vt-clan-title .usr_grp_clr{padding:0 .5em}
+.vt-clan-sub{font-size:.62rem;letter-spacing:.2em}
+.vt-clan-card{padding:.75rem .9rem}
+.vt-clan-h{margin-bottom:.6rem!important;padding-bottom:.4rem!important;font-size:.8rem!important}
+.vt-facts{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.5rem}
+.vt-fact{gap:.2rem;padding:.45rem .8rem;border-left-width:3px}
+.vt-fact dt label{font-size:.6rem}
+.vt-fact dd{font-size:.84rem;line-height:1.4}
+.vt-count-badge{min-width:1.8rem;padding:0 .6rem;font-size:.85rem}
+.vt-radio span{padding:.25rem .8rem;font-size:.72rem}
+.vt-type-pick{gap:.4rem}
+.vt-roster thead th{padding:.5rem .7rem;background:var(--vt-head-b);font-size:.6rem;letter-spacing:.14em}
+.vt-roster thead th:first-child{background:var(--vt-head-b)}
+.vt-roster-row td{padding:.35rem .7rem;font-size:.82rem}
+.vt-roster-sep td{padding:.6rem .4rem .1rem!important;font-size:.7rem}
+.vt-roster td a:has(>img){width:1.65rem;height:1.65rem}
+.vt-roster td a:has(>img)::before{width:.8rem;height:.8rem}
+.vt-roster-tools{padding:.6rem .8rem;gap:.5rem}
+.vt-pending{padding:.7rem .9rem}
+.vt-pending-title{font-size:.8rem!important}
+.vt-clan-tile{padding:.6rem .8rem;gap:.35rem}
+.vt-clan-link{padding:.25rem .8rem;font-size:.82rem}
+.vt-clan-meta{font-size:.72rem}
