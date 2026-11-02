@@ -1400,3 +1400,9 @@ input.button1.vt-btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
 .vt-faq-top a::before{content:"";width:.75rem;height:.75rem;background:currentColor;-webkit-mask:var(--ic-up) center/contain no-repeat;mask:var(--ic-up) center/contain no-repeat}
 .vt-faq-top a:hover{color:var(--vt-blood-hot)!important}
 .vt-faq-noscript{text-align:center;color:var(--vt-text)}
+
+/* 32b. FAQ: blood-drop marker instead of "?", no border around answers */
+.vt-faq-q::before,.vt-faq-question::before{-webkit-mask-image:var(--ic-drop);mask-image:var(--ic-drop)}
+.vt-faq-a p,.vt-faq-answer p,.vt-faq-a dd,.vt-faq-a{outline:0}
+.vt-faq-a p,.vt-faq-answer,.vt-faq-answer p{border:0!important;padding:0!important;background:none!important;box-shadow:none!important}
+.vt-faq-q:has(+ .vt-faq-a:not([style*="none"]))::after{transform:rotate(90deg)}
