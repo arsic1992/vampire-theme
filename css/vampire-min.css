@@ -1309,3 +1309,26 @@ input.button2.vt-btn.vt-btn--danger{background:linear-gradient(100deg,#3a0610,va
 .vt-clan-tile{padding:.6rem .8rem;gap:.35rem}
 .vt-clan-link{padding:.25rem .8rem;font-size:.82rem}
 .vt-clan-meta{font-size:.72rem}
+
+/* 30. search_body + navbar search popup */
+.vt-hunt{display:flex;flex-direction:column;gap:.7rem;margin:0 0 1rem}
+.vt-hunt .vt-facts{grid-template-columns:1fr}
+.vt-hunt .vt-fact{flex-direction:row;flex-wrap:wrap;align-items:center;gap:.4rem .5rem}
+.vt-hunt .vt-fact dt{flex:1 0 100%}
+.vt-hunt .vt-fact dd{flex:0 0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+.vt-hunt .vt-fact dd.vt-hunt-main{flex:1 1 260px}
+.vt-hunt input.inputbox,.vt-hunt .vt-hunt-main select{flex:1 1 200px;width:auto!important;max-width:100%;min-width:0}
+.vt-hunt select{padding:.45rem .8rem;border:1px solid var(--vt-line);border-radius:8px 2px 8px 2px;background:var(--vt-surface2);color:var(--vt-text);font:inherit;font-size:.85rem}
+.vt-hunt select:focus{border-color:var(--vt-blood-hot);box-shadow:0 0 0 3px var(--vt-glow);outline:0}
+.vt-hunt .vt-radio input[type=radio],.vt-hunt .vt-radio input[type=checkbox]{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.vt-hunt-go{display:flex;justify-content:flex-end}
+.vt-hunt-go fieldset{margin:0;padding:0;border:0}
+input.button1.vt-btn{-webkit-appearance:none;appearance:none;display:inline-flex;align-items:center;justify-content:center;width:auto!important;height:auto!important;margin:0;padding:.6rem 2rem!important;border:0!important;border-radius:999px 4px 999px 4px!important;background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display)!important;font-size:.76rem!important;font-weight:700!important;letter-spacing:.2em;text-transform:uppercase;text-shadow:none!important;box-shadow:0 4px 12px var(--vt-glow)!important;cursor:pointer;transition:transform .2s,filter .2s}
+input.button1.vt-btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+/* navbar popup: Forumotion sets left/top inline, so force position under the bar */
+.vt-navbar #search_menu{position:fixed!important;top:calc(var(--vt-nav-h) + 14px)!important;left:auto!important;right:1rem!important;transform:none!important}
+.vt-navbar #search_menu .center-overview{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+.vt-navbar #search_menu input.inputbox{flex:1 1 150px;width:auto!important}
+.vt-navbar #search_menu .center-overview br{flex-basis:100%;height:0}
+.vt-navbar #search_menu input[type=radio]{accent-color:var(--vt-blood);margin:0 .2rem 0 .5rem}
+.vt-navbar #search_menu label{display:inline;color:var(--vt-text);font-weight:600;cursor:pointer}
