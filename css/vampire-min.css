@@ -1175,3 +1175,11 @@ body#phpbb{padding-top:var(--vt-nav-h)!important}
 .vt-awards-list .award_tooltiptext{display:none!important}
 .vt-award-tip{position:fixed;z-index:100000;display:none;max-width:230px;padding:.55rem .8rem;border:1px solid var(--vt-gold);border-radius:10px;background:var(--vt-surface);box-shadow:var(--vt-shadow);color:var(--vt-text);font-size:.76rem;line-height:1.45;pointer-events:none}
 .vt-award-tip .award_tooltiptext_title{margin-bottom:.15rem;font-family:var(--vt-font-display);font-weight:700;letter-spacing:.08em;color:var(--vt-blood)}
+
+/* 28. PATCH awards: independent dropdown (does not push anything), scrolls past 6 */
+.vt-post .vt-dossier{overflow:visible;z-index:5}
+.vt-post .vt-dossier dd.dd_award.vt-awards{position:static!important}
+.vt-awards-box{position:relative;display:inline-block}
+.vt-awards-box .vt-awards-list{position:absolute;left:0;top:calc(100% + 8px);z-index:60;display:flex;flex-wrap:wrap;align-content:flex-start;gap:.5rem;width:318px;max-width:80vw;max-height:70px;margin:0;padding:.7rem;overflow-x:hidden;overflow-y:auto;border:1px solid var(--vt-gold);border-radius:12px;background:var(--vt-surface);box-shadow:var(--vt-shadow),0 0 0 4px color-mix(in srgb,var(--vt-gold) 16%,transparent);scrollbar-width:thin;scrollbar-color:var(--vt-gold) transparent}
+.vt-awards-box[open] .vt-awards-list{animation:vt-pop .2s ease-out}
+.vt-post .postprofile.vt-dossier{overflow:visible!important;z-index:5}
