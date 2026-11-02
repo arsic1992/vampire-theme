@@ -1165,3 +1165,13 @@ body#phpbb{padding-top:var(--vt-nav-h)!important}
 .vt-console .vt-console-fields .vt-btn{flex:none}
 .vt-console>.clear{display:none}
 .vt-console>.vt-admin{flex:1 1 100%;justify-content:flex-end}
+
+/* 27. PATCH awards: legacy .dd_award clips its height (for the old "more" button) */
+.vt-post .vt-dossier dd.dd_award.vt-awards{height:auto!important;max-height:none!important;min-height:0!important;overflow:visible!important;margin:0!important;padding:0!important;border:0!important;background:none!important}
+.vt-post .vt-ident .award_more{display:none!important}
+.vt-awards-box[open]{display:block}
+.vt-awards-list .award{display:block!important;visibility:visible!important;opacity:1!important}
+.vt-awards-list .award:hover{z-index:5}
+.vt-awards-list .award_tooltiptext{display:none!important}
+.vt-award-tip{position:fixed;z-index:100000;display:none;max-width:230px;padding:.55rem .8rem;border:1px solid var(--vt-gold);border-radius:10px;background:var(--vt-surface);box-shadow:var(--vt-shadow);color:var(--vt-text);font-size:.76rem;line-height:1.45;pointer-events:none}
+.vt-award-tip .award_tooltiptext_title{margin-bottom:.15rem;font-family:var(--vt-font-display);font-weight:700;letter-spacing:.08em;color:var(--vt-blood)}
