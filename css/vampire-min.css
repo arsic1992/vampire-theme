@@ -1820,3 +1820,18 @@ body:has(#simple-wrap.vt-popup){margin:0!important;padding:1rem!important;backgr
 .vt-popup-close{margin:0!important}
 .vt-popup-close a.vt-btn{display:inline-block;text-decoration:none!important;color:var(--vt-head-text)!important}
 .vt-letter--preview .vt-letter-text{min-height:0}
+
+/* 45. posting_confirm_code ("the gate asks once more") */
+.vt-confirm{position:relative;display:flex;flex-direction:column;align-items:center;gap:1rem;max-width:560px;margin:2rem auto;padding:2rem 1.8rem 1.8rem;overflow:hidden;border:1px solid var(--vt-line);border-radius:var(--vt-radius);background:linear-gradient(180deg,var(--vt-surface),var(--vt-surface2) 150%);box-shadow:var(--vt-shadow);text-align:center}
+.vt-confirm::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--vt-blood),var(--vt-gold-hot) 50%,var(--vt-blood))}
+.vt-confirm-seal{position:relative;width:3.6rem;height:3.6rem;border-radius:50%;background:linear-gradient(160deg,var(--vt-blood-hot),var(--vt-blood));box-shadow:0 6px 18px var(--vt-glow)}
+.vt-confirm-seal::before{content:"";position:absolute;inset:0;margin:auto;width:1.6rem;height:1.6rem;background:var(--vt-gold-hot);-webkit-mask:var(--ic-lock) center/contain no-repeat;mask:var(--ic-lock) center/contain no-repeat}
+.vt-confirm p{margin:0!important}
+.vt-confirm-error:empty,.vt-confirm-error:has(strong:empty){display:none}
+.vt-confirm-error strong{display:inline-block;padding:.45rem 1rem;border:1px solid var(--vt-blood-hot);border-radius:10px 3px 10px 3px;background:color-mix(in srgb,var(--vt-blood-hot) 12%,transparent);color:var(--vt-blood-hot);font-size:.85rem}
+.vt-confirm-form{display:flex;flex-direction:column;align-items:center;gap:1.1rem;width:100%;margin:0}
+.vt-confirm-title{font-family:var(--vt-font-display);font-size:1.15rem;letter-spacing:.08em;text-transform:uppercase}
+.vt-confirm-title strong{color:var(--vt-blood)}
+:root[data-theme="dark"] .vt-confirm-title strong{color:var(--vt-gold-hot)}
+.vt-confirm-explain{margin-top:.5rem!important;color:var(--vt-muted);line-height:1.7}
+.vt-confirm-hidden{display:none!important}
