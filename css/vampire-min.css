@@ -1714,3 +1714,8 @@ ul.vt-mail-list{display:flex;flex-direction:column;gap:.45rem;margin:0!important
 .jqmOverlay{background:#000!important;opacity:.6!important}
 @media(max-width:760px){.vt-field{grid-template-columns:1fr}.vt-editor-row{grid-template-columns:1fr}.vt-smiley-box{order:3}}
 .vt-add-user{object-fit:none!important;object-position:-9999px -9999px}
+
+/* 41b. the legacy #smiley-box id rule painted it light blue: win by specificity */
+.vt-compose #smiley-box.vt-smiley-box{background:var(--vt-surface2)!important;background-image:none!important;border:1px solid var(--vt-line)!important;border-radius:4px 14px 4px 14px!important;box-shadow:none!important;color:var(--vt-muted)!important}
+.vt-compose #smiley-box.vt-smiley-box #smileyContainer{background:none!important;border:0!important}
+.vt-compose #smiley-box .vt-status,.vt-compose #smiley-box .vt-status a{background:none!important}
