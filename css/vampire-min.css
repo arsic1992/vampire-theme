@@ -1835,3 +1835,18 @@ body:has(#simple-wrap.vt-popup){margin:0!important;padding:1rem!important;backgr
 :root[data-theme="dark"] .vt-confirm-title strong{color:var(--vt-gold-hot)}
 .vt-confirm-explain{margin-top:.5rem!important;color:var(--vt-muted);line-height:1.7}
 .vt-confirm-hidden{display:none!important}
+
+/* 46. posting_poll_body: poll options inside the composer */
+.vt-poll-card .vt-clan-h{display:flex;align-items:center;gap:.6rem}
+.vt-poll-card .vt-clan-h::before{content:"";flex:none;width:1.1rem;height:1.1rem;background:var(--vt-gold-hot);-webkit-mask:var(--ic-list) center/contain no-repeat;mask:var(--ic-list) center/contain no-repeat}
+.vt-poll-card .vt-hint{display:block;margin-top:.3rem;color:var(--vt-muted);font-size:.74rem;font-style:italic;font-weight:400;letter-spacing:0;text-transform:none}
+.vt-poll-card .vt-field dt{display:flex;flex-direction:column}
+.vt-poll-card hr.vt-poll-sep{height:0;margin:.4rem 0;border:0;border-top:2px dotted var(--vt-gold)}
+.vt-poll-card .vt-opt-row{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+.vt-poll-card .vt-opt-row .vt-input{flex:1 1 220px;width:auto!important}
+.vt-poll-card .vt-opt-row--inline{display:inline-flex;margin-right:.5rem}
+.vt-poll-card .vt-opt-row--inline .vt-input{flex:none}
+.vt-poll-card .vt-opt-row input.vt-btn{flex:none}
+.vt-poll-card .vt-checks{align-items:center}
+.vt-poll-card .vt-check input{accent-color:var(--vt-blood)}
+@media (max-width:640px){.vt-poll-card .vt-field{grid-template-columns:1fr}}
