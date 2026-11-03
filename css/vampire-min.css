@@ -1528,3 +1528,15 @@ body#phpbb #wrap{border-color:transparent!important;box-shadow:none}
 .vt-pager-pages a.pag-img::before{content:"";width:.8rem;height:.8rem;background:currentColor;-webkit-mask:var(--ic-chevron) center/contain no-repeat;mask:var(--ic-chevron) center/contain no-repeat}
 .vt-pager-pages a.pag-img:has(.sprite-arrow_prosilver_left)::before{transform:rotate(180deg)}
 .vt-pager-pages a.pag-img{margin-left:.1rem!important}
+
+/* 38. "Go to page" popup (built by Forumotion's script and inserted at the top of <body>) */
+form[name="go_page"]{margin:0}
+form[name="go_page"] .gen{display:block}
+form[name="go_page"] table.forumline{width:200px!important;border-collapse:separate!important;border-spacing:0!important;overflow:hidden;border:1px solid var(--vt-gold)!important;border-radius:14px!important;background:var(--vt-surface)!important;box-shadow:var(--vt-shadow),0 0 0 4px color-mix(in srgb,var(--vt-gold) 16%,transparent);animation:vt-pop .2s ease-out}
+form[name="go_page"] th.thHead{display:table-cell;padding:.7rem 1rem!important;border:0!important;background:linear-gradient(100deg,var(--vt-head-a),var(--vt-head-b) 55%,var(--vt-head-c))!important;box-shadow:inset 0 -2px 0 var(--vt-gold-hot);color:var(--vt-head-text)!important;font-family:var(--vt-font-display);font-size:.72rem!important;font-weight:700!important;letter-spacing:.2em;text-align:center;text-transform:uppercase;height:auto!important}
+form[name="go_page"] td.row1{display:table-cell;padding:.9rem 1rem!important;border:0!important;background:none!important;text-align:center}
+form[name="go_page"] td.row1>*{vertical-align:middle}
+form[name="go_page"] input.bginput{box-sizing:border-box;width:4.2rem!important;height:2.1rem;margin-right:.4rem;padding:0 .6rem;border:1px solid var(--vt-line);border-radius:3px;background:var(--vt-surface2)!important;color:var(--vt-text)!important;font:inherit;font-weight:700;text-align:center;outline:0}
+form[name="go_page"] input.bginput:focus{border-color:var(--vt-blood-hot);box-shadow:0 0 0 3px var(--vt-glow)}
+form[name="go_page"] input.button{-webkit-appearance:none;appearance:none;height:2.1rem;padding:0 1.2rem!important;border:0!important;border-radius:999px 4px 999px 4px!important;background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display)!important;font-size:.7rem!important;font-weight:700!important;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 4px 12px var(--vt-glow);cursor:pointer;transition:filter .2s,transform .2s}
+form[name="go_page"] input.button:hover{filter:brightness(1.15);transform:translateY(-1px)}
