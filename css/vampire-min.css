@@ -1474,3 +1474,7 @@ body#phpbb>#page-header.vt-hero{position:relative;display:block;box-sizing:borde
 /* 36. #wrap and the legacy containers: no white background, follow the theme */
 body#phpbb .conteneur_minwidth_IE,body#phpbb .conteneur_layout_IE,body#phpbb .conteneur_container_IE,body#phpbb #wrap,body#phpbb #page-body{background-color:transparent!important;background-image:none!important}
 body#phpbb #wrap{border-color:transparent!important;box-shadow:none}
+
+/* 33b. memberlist: legacy .row1/.row2 colour on the <tr> showed white in the rounded corners */
+.vt-reg tr,.vt-reg tbody,.vt-reg thead,.vt-reg-row,.vt-reg-row.row1,.vt-reg-row.row2{background:none!important;background-color:transparent!important}
+.vt-roster tr,.vt-roster tbody,.vt-roster-row,.vt-roster-row.row1,.vt-roster-row.row2{background:none!important;background-color:transparent!important}
