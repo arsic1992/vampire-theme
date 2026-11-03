@@ -1489,3 +1489,16 @@ body#phpbb #wrap{border-color:transparent!important;box-shadow:none}
 .vt-thread[data-icon*="unread"] h2.vt-thread-title a.topictitle{color:var(--vt-blood-hot)!important;font-weight:800!important}
 .vt-thread[data-icon*="locked"] h2.vt-thread-title a.topictitle{color:var(--vt-muted)!important}
 @media(max-width:600px){.vt-thread h2.vt-thread-title{font-size:1.1rem!important}}
+
+/* 37. pagination (topic page links, and every .pagination block) */
+.pagination,.vt-thread-pages .pagination{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.3rem;margin:0;padding:0!important;border:0!important;background:none!important;font-weight:400;font-size:.8rem;color:var(--vt-muted);line-height:1}
+.pagination::before,.pagination::after{content:none!important;display:none!important}
+.pagination>span{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.3rem;background:none!important;padding:0!important}
+.pagination .page-sep{display:none!important}
+.pagination a,.pagination strong>span,.pagination>strong{box-sizing:border-box}
+.pagination a,.pagination span>strong{display:inline-flex;align-items:center;justify-content:center;min-width:1.8rem;height:1.8rem;margin:0!important;padding:0 .55rem!important;border:1px solid var(--vt-gold)!important;border-radius:999px 4px 999px 4px!important;background:var(--vt-surface)!important;background-image:none!important;color:var(--vt-blood)!important;font-family:var(--vt-font-display);font-size:.78rem!important;font-weight:700!important;text-decoration:none!important;text-indent:0!important;transition:background .2s,color .2s,transform .2s,box-shadow .2s}
+.pagination a:hover{border-color:var(--vt-blood-hot)!important;background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;color:var(--vt-head-text)!important;transform:translateY(-2px);box-shadow:0 4px 10px var(--vt-glow)}
+.pagination span>strong,.pagination a.current{background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;color:var(--vt-head-text)!important}
+:root[data-theme="dark"] .pagination a{color:var(--vt-gold-hot)!important}
+:root[data-theme="dark"] .pagination a:hover{color:var(--vt-head-text)!important}
+.vt-thread-pages{display:flex;align-items:center}
