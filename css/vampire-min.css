@@ -1638,3 +1638,79 @@ ul.vt-mail-list{display:flex;flex-direction:column;gap:.45rem;margin:0!important
 .vt-mail-pages{justify-content:flex-start}
 .vt-mail-pages .pagination{margin:0!important;justify-content:flex-start!important}
 .vt-mail-pages .pagination:empty{display:none}
+
+/* 41. posting_body: new topic / reply / edit / private message composer */
+.vt-compose{display:flex;flex-direction:column;gap:.9rem;margin:0 0 1.2rem}
+.vt-compose-box,.vt-submit,.vt-options,.vt-attach,.vt-dice,.vt-calendar,.vt-seo,.vt-rules{padding:1rem 1.2rem}
+.vt-fields{display:flex;flex-direction:column;gap:.2rem;min-width:0;margin:0!important;padding:0!important;border:0!important}
+.vt-field{display:grid;grid-template-columns:170px minmax(0,1fr);gap:.4rem 1rem;align-items:center;margin:0!important;padding:.55rem 0;border-bottom:1px dashed var(--vt-line);float:none!important}
+.vt-field:last-of-type{border-bottom:0}
+.vt-field dt,.vt-field dd{float:none!important;width:auto!important;margin:0!important;padding:0!important;min-width:0}
+.vt-field dt label,.vt-field>label{display:block;color:var(--vt-gold);font-family:var(--vt-font-display);font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.vt-field dd{color:var(--vt-text);font-size:.9rem}
+.vt-field--users dd{display:block}
+.vt-compose input.vt-input,.vt-compose textarea.vt-input{box-sizing:border-box;width:100%!important;max-width:100%;height:auto;padding:.55rem 1rem;border:1px solid var(--vt-line)!important;border-radius:999px 4px 999px 4px;background:var(--vt-surface2)!important;color:var(--vt-text)!important;font:inherit;font-size:.9rem;outline:0;transition:border-color .2s,box-shadow .2s}
+.vt-compose textarea.vt-input{border-radius:12px 4px 12px 4px;resize:vertical}
+.vt-compose .vt-input:focus{border-color:var(--vt-blood-hot)!important;box-shadow:0 0 0 3px var(--vt-glow)}
+.vt-compose .vt-field--users input.vt-input{display:inline-block;width:min(260px,100%)!important;margin:2px 0}
+.vt-compose input.vt-input.tiny{width:4.2rem!important;text-align:center}
+.vt-compose select{max-width:100%;padding:.5rem .8rem;border:1px solid var(--vt-line);border-radius:8px 2px 8px 2px;background:var(--vt-surface2);color:var(--vt-text);font:inherit;font-size:.86rem}
+.vt-compose select:focus{border-color:var(--vt-blood-hot);box-shadow:0 0 0 3px var(--vt-glow);outline:0}
+.vt-color-pick{margin-left:.6rem}
+.vt-add-user{display:inline-block;width:1.7rem;height:1.7rem;margin:0 .2rem;vertical-align:middle;background:var(--vt-blood-hot);-webkit-mask:var(--ic-plus) center/contain no-repeat;mask:var(--ic-plus) center/contain no-repeat;object-fit:fill;cursor:pointer;transition:background .2s,transform .2s}
+.vt-add-user:hover{background:var(--vt-gold-hot);transform:rotate(90deg)}
+.vt-compose input.vt-help-btn{width:2rem!important;height:2rem;padding:0!important;border:1px solid var(--vt-gold)!important;border-radius:50%!important;background:var(--vt-surface2)!important;color:var(--vt-blood)!important;font-weight:800;cursor:help}
+.vt-icons{display:flex;flex-wrap:wrap;gap:.5rem}
+.vt-icon-pick{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .6rem;border:1px solid var(--vt-line);border-radius:8px;background:var(--vt-surface2);cursor:pointer}
+.vt-icon-pick:has(input:checked){border-color:var(--vt-blood);box-shadow:0 0 0 2px var(--vt-glow)}
+/* editor + emoticon column */
+.vt-editor-row{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:1rem;align-items:start;margin-top:.6rem}
+.vt-message-box{order:1;float:none!important;width:auto!important;min-width:0;margin:0!important;padding:0!important}
+.vt-message-box #textarea_content{width:100%!important;margin:0}
+.vt-message-box .left-box{float:none!important;min-height:1.1rem;margin:0 0 .4rem;color:var(--vt-muted);font-size:.78rem}
+.vt-message-box br{display:none}
+.vt-compose .sceditor-container{width:100%!important;max-width:100%}
+.vt-compose .sceditor-container>iframe,.vt-compose .sceditor-container>textarea{box-sizing:border-box;width:100%!important}
+.vt-smiley-box{order:2;float:none!important;width:auto!important;margin:0!important;padding:.6rem;border:1px solid var(--vt-line);border-radius:4px 14px 4px 14px;background:var(--vt-surface2)}
+.vt-smiley-box #smileyContainer{margin:0;padding:0;overflow:hidden;border-radius:8px}
+.vt-smiley-box iframe{display:block;width:100%!important;height:280px;border:0;border-radius:8px;background:var(--vt-surface)}
+.vt-status{margin:.6rem 0 0!important;color:var(--vt-muted);font-size:.74rem;line-height:1.6}
+.vt-status a{color:var(--vt-blood)!important;font-weight:700}
+:root[data-theme="dark"] .vt-status a{color:var(--vt-gold-hot)!important}
+/* submit bar + options */
+.vt-submit-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.6rem;margin:0!important;padding:0!important;border:0!important}
+.vt-submit-warn{flex:1 0 100%;text-align:center;color:var(--vt-blood-hot);font-size:.82rem}
+.vt-submit-row input.button1.vt-btn{padding:.65rem 2.4rem!important}
+.vt-checks{display:flex;flex-wrap:wrap;gap:.5rem;margin:0!important;padding:0!important;border:0!important}
+.vt-checks br{display:none}
+.vt-check{display:inline-flex;align-items:center;gap:.45rem;margin:0!important;padding:.45rem 1rem;border:1px solid var(--vt-line);border-radius:999px 4px 999px 4px;background:var(--vt-surface2);color:var(--vt-text);font-size:.84rem;cursor:pointer;transition:border-color .2s,background .2s}
+.vt-check:hover{border-color:var(--vt-blood-hot)}
+.vt-check:has(input:checked){border-color:var(--vt-blood);background:color-mix(in srgb,var(--vt-blood) 10%,var(--vt-surface))}
+.vt-check--danger:has(input:checked){border-color:var(--vt-blood-hot);color:var(--vt-blood-hot)}
+.vt-check input,.vt-icon-pick input{accent-color:var(--vt-blood);cursor:pointer}
+.vt-type-toggle{flex:1 0 100%;margin-top:.4rem}
+.vt-rule{height:0;margin:.9rem 0!important;border:0!important;border-top:1px dashed var(--vt-gold)!important;background:none!important}
+/* misc blocks */
+.vt-warnbox{padding:.8rem 1.1rem;border:1px solid var(--vt-blood-hot);border-left-width:5px;border-radius:4px 14px 4px 14px;background:color-mix(in srgb,var(--vt-blood) 10%,var(--vt-surface));color:var(--vt-blood-hot);font-weight:700}
+.vt-warnbox p{margin:0}
+.vt-rules-table{width:100%;border:0!important;background:none!important}
+.vt-rules-table td{padding:.4rem .6rem;border:0!important;background:none!important;color:var(--vt-text);font-size:.88rem;line-height:1.6}
+.vt-hint{display:block;margin-top:.3rem;color:var(--vt-muted);font-size:.76rem}
+.vt-today{margin-left:.6rem;color:var(--vt-blood)!important;font-weight:700;text-decoration:none!important}
+.vt-today:hover{text-decoration:underline!important}
+.vt-attach-help{margin:0 0 .6rem;color:var(--vt-muted);font-size:.84rem}
+.vt-attach-max{color:var(--vt-muted);font-size:.78rem}
+.vt-file{max-width:100%;color:var(--vt-text);font-size:.84rem}
+.vt-file::file-selector-button{margin-right:.7rem;padding:.4rem 1rem;border:1px solid var(--vt-gold);border-radius:999px 3px 999px 3px;background:var(--vt-surface2);color:var(--vt-blood);font-weight:700;cursor:pointer}
+.vt-dice #list_dice{width:100%;border:0;color:var(--vt-text);font-size:.88rem}
+.vt-dice #list_dice td{padding:.3rem 0;border:0;background:none}
+.vt-dice input[type=text]{width:3rem;padding:.35rem;border:1px solid var(--vt-line);border-radius:6px;background:var(--vt-surface2);color:var(--vt-text);text-align:center}
+.vt-attach input.liteoption{margin-left:.5rem}
+/* Find a username / mass-PM help popups (jqModal) */
+.jqmWindow{z-index:10010!important;padding:1rem 1.2rem!important;border:1px solid var(--vt-gold)!important;border-radius:14px!important;background:var(--vt-surface)!important;color:var(--vt-text)!important;box-shadow:var(--vt-shadow),0 0 0 4px color-mix(in srgb,var(--vt-gold) 16%,transparent)!important}
+.jqmWindow a{color:var(--vt-blood)!important}
+:root[data-theme="dark"] .jqmWindow a{color:var(--vt-gold-hot)!important}
+.jqmWindow input[type=text]{padding:.45rem .9rem;border:1px solid var(--vt-line);border-radius:999px;background:var(--vt-surface2);color:var(--vt-text)}
+.jqmOverlay{background:#000!important;opacity:.6!important}
+@media(max-width:760px){.vt-field{grid-template-columns:1fr}.vt-editor-row{grid-template-columns:1fr}.vt-smiley-box{order:3}}
+.vt-add-user{object-fit:none!important;object-position:-9999px -9999px}
