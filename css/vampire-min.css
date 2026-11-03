@@ -1512,3 +1512,6 @@ body#phpbb #wrap{border-color:transparent!important;box-shadow:none}
 .pagination span>strong,.pagination a.current{border-color:var(--vt-blood)!important;border-bottom-color:var(--vt-gold-hot)!important;background:linear-gradient(180deg,var(--vt-head-c),var(--vt-head-b))!important;color:#fff!important}
 :root[data-theme="dark"] .pagination a{color:var(--vt-text)!important}
 :root[data-theme="dark"] .pagination a:hover{color:#fff!important}
+
+/* 37c. topic-list page links: right side of their row */
+.vt-thread-pages,.vt-thread-pages .pagination{justify-content:flex-end!important;text-align:right!important;margin-left:auto;margin-right:0}
