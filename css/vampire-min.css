@@ -1801,3 +1801,22 @@ ul.vt-letter-tools{display:flex;gap:.4rem;margin:0!important;padding:0!important
 /* 43b. the legacy button pictures are hidden, so the pill needs its own label */
 .vt-newpm a::after{content:"New message"}
 .vt-newpm.vt-reply a::after{content:"Reply"}
+
+/* 44. privmsgs_preview + privmsgs_popup */
+.vt-preview-label.h3{display:flex;align-items:center;gap:.6rem;margin:0 0 .6rem!important;padding:.55rem 1rem!important;border:0!important;border-radius:12px 3px 12px 3px;background:var(--vt-head-b)!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display);font-size:.7rem!important;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.vt-preview-eye{width:1rem;height:1rem;background:var(--vt-gold-hot);-webkit-mask:var(--ic-eye) center/contain no-repeat;mask:var(--ic-eye) center/contain no-repeat}
+.vt-letter--preview{margin:0 0 1.2rem!important}
+.vt-letter--preview .vt-letter-head{display:block}
+.vt-letter--preview h3.vt-letter-subject{margin:0 0 .3rem!important}
+body:has(#simple-wrap.vt-popup){margin:0!important;padding:1rem!important;background:var(--vt-bg,var(--vt-surface2))!important;min-height:100vh;box-sizing:border-box}
+#simple-wrap.vt-popup{display:flex;align-items:center;justify-content:center;width:auto!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;background:none!important}
+.vt-popup-card.panel{position:relative;display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%;max-width:440px;margin:0!important;padding:2rem 1.6rem 1.5rem!important;overflow:hidden;border:1px solid var(--vt-line)!important;border-radius:var(--vt-radius)!important;background:linear-gradient(180deg,var(--vt-surface),var(--vt-surface2) 150%)!important;box-shadow:var(--vt-shadow);color:var(--vt-text);text-align:center}
+.vt-popup-card::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--vt-blood),var(--vt-gold-hot) 50%,var(--vt-blood))}
+.vt-popup-seal{width:3.4rem;height:3.4rem;border-radius:50%;background:linear-gradient(160deg,var(--vt-blood-hot),var(--vt-blood));box-shadow:0 6px 18px var(--vt-glow);position:relative}
+.vt-popup-seal::before{content:"";position:absolute;inset:0;margin:auto;width:1.5rem;height:1.5rem;background:var(--vt-gold-hot);-webkit-mask:var(--ic-mail) center/contain no-repeat;mask:var(--ic-mail) center/contain no-repeat}
+.vt-popup-msg{margin:0!important;font-family:var(--vt-font-display);font-size:1.05rem;font-weight:700;line-height:1.5;letter-spacing:.03em}
+.vt-popup-msg a{color:var(--vt-blood)!important;text-decoration:underline;text-underline-offset:3px}
+:root[data-theme="dark"] .vt-popup-msg a{color:var(--vt-gold-hot)!important}
+.vt-popup-close{margin:0!important}
+.vt-popup-close a.vt-btn{display:inline-block;text-decoration:none!important;color:var(--vt-head-text)!important}
+.vt-letter--preview .vt-letter-text{min-height:0}
