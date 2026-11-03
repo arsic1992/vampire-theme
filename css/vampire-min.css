@@ -1478,3 +1478,14 @@ body#phpbb #wrap{border-color:transparent!important;box-shadow:none}
 /* 33b. memberlist: legacy .row1/.row2 colour on the <tr> showed white in the rounded corners */
 .vt-reg tr,.vt-reg tbody,.vt-reg thead,.vt-reg-row,.vt-reg-row.row1,.vt-reg-row.row2{background:none!important;background-color:transparent!important}
 .vt-roster tr,.vt-roster tbody,.vt-roster-row,.vt-roster-row.row1,.vt-roster-row.row2{background:none!important;background-color:transparent!important}
+
+/* 5b. topic titles: legacy a.topictitle rules made them small and plain */
+.vt-thread .topic-title-container{margin:0;padding:0;background:none!important}
+.vt-thread h2.vt-thread-title{margin:0 0 .15rem!important;padding:0!important;border:0!important;background:none!important;font-family:var(--vt-font-display)!important;font-size:1.3rem!important;font-weight:700!important;letter-spacing:.03em;line-height:1.25!important;text-transform:none}
+.vt-thread h2.vt-thread-title a.topictitle{display:inline;background:linear-gradient(90deg,var(--vt-blood-hot),var(--vt-gold-hot)) left bottom/0 2px no-repeat;color:var(--vt-text)!important;font-family:inherit!important;font-size:inherit!important;font-weight:inherit!important;letter-spacing:inherit;text-decoration:none!important;padding-bottom:.12em;transition:background-size .3s ease,color .2s}
+.vt-thread h2.vt-thread-title a.topictitle:hover{background-size:100% 2px;color:var(--vt-blood-hot)!important}
+:root[data-theme="dark"] .vt-thread h2.vt-thread-title a.topictitle{color:#f6e6d6!important;text-shadow:0 1px 10px rgba(225,29,63,.25)}
+:root[data-theme="dark"] .vt-thread h2.vt-thread-title a.topictitle:hover{color:var(--vt-gold-hot)!important}
+.vt-thread[data-icon*="unread"] h2.vt-thread-title a.topictitle{color:var(--vt-blood-hot)!important;font-weight:800!important}
+.vt-thread[data-icon*="locked"] h2.vt-thread-title a.topictitle{color:var(--vt-muted)!important}
+@media(max-width:600px){.vt-thread h2.vt-thread-title{font-size:1.1rem!important}}
