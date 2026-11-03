@@ -1470,3 +1470,7 @@ body#phpbb>#page-header.vt-hero{position:relative;display:block;box-sizing:borde
 .vt-nav-left #fa_left{gap:.5rem}
 .vt-nav-left #fa_left a#fa_icon{display:inline-block!important;flex:none;min-width:1rem;margin:0!important;padding:0!important;background-color:transparent!important;background-repeat:no-repeat;-webkit-mask:none;mask:none;transition:transform .2s}
 .vt-nav-left #fa_left a#fa_icon:hover{transform:rotate(-8deg) scale(1.08)}
+
+/* 36. #wrap and the legacy containers: no white background, follow the theme */
+body#phpbb .conteneur_minwidth_IE,body#phpbb .conteneur_layout_IE,body#phpbb .conteneur_container_IE,body#phpbb #wrap,body#phpbb #page-body{background-color:transparent!important;background-image:none!important}
+body#phpbb #wrap{border-color:transparent!important;box-shadow:none}
