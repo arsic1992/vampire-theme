@@ -1515,3 +1515,16 @@ body#phpbb #wrap{border-color:transparent!important;box-shadow:none}
 
 /* 37c. topic-list page links: right side of their row */
 .vt-thread-pages,.vt-thread-pages .pagination{justify-content:flex-end!important;text-align:right!important;margin-left:auto;margin-right:0}
+
+/* 37d. viewtopic pager: "Page 1 of 2" is a plain jump link; only the page numbers are tiles */
+.pagination.vt-pager{display:flex!important;flex-wrap:wrap;gap:.6rem 1rem;justify-content:space-between!important;text-align:inherit!important;font-size:.8rem}
+.vt-pager-pages{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .5rem;color:var(--vt-muted)}
+.vt-pager-pages a[href^="javascript"]{display:inline!important;min-width:0!important;height:auto!important;margin:0 .15rem 0 0!important;padding:0 0 .1rem!important;border:0!important;border-bottom:1px dotted var(--vt-gold)!important;border-radius:0!important;background:none!important;box-shadow:none!important;color:var(--vt-muted)!important;font-family:inherit!important;font-size:.82rem!important;font-weight:400!important;transform:none!important;cursor:pointer}
+.vt-pager-pages a[href^="javascript"] strong{display:inline!important;min-width:0!important;height:auto!important;margin:0 .1rem!important;padding:0!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;color:var(--vt-blood)!important;font-family:var(--vt-font-display)!important;font-size:.95rem!important;font-weight:800!important}
+:root[data-theme="dark"] .vt-pager-pages a[href^="javascript"] strong{color:var(--vt-blood-hot)!important}
+.vt-pager-pages a[href^="javascript"]:hover{background:none!important;color:var(--vt-blood-hot)!important;box-shadow:none!important;transform:none!important}
+/* next / previous arrows: same rectangular tile, our own chevron instead of the sprite */
+.vt-pager-pages a.pag-img img{display:none!important}
+.vt-pager-pages a.pag-img::before{content:"";width:.8rem;height:.8rem;background:currentColor;-webkit-mask:var(--ic-chevron) center/contain no-repeat;mask:var(--ic-chevron) center/contain no-repeat}
+.vt-pager-pages a.pag-img:has(.sprite-arrow_prosilver_left)::before{transform:rotate(180deg)}
+.vt-pager-pages a.pag-img{margin-left:.1rem!important}
