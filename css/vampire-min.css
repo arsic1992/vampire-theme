@@ -1850,3 +1850,42 @@ body:has(#simple-wrap.vt-popup){margin:0!important;padding:1rem!important;backgr
 .vt-poll-card .vt-checks{align-items:center}
 .vt-poll-card .vt-check input{accent-color:var(--vt-blood)}
 @media (max-width:640px){.vt-poll-card .vt-field{grid-template-columns:1fr}}
+
+/* 47. viewtopic poll ballot (the "vt-poll" block) */
+.vt-poll{margin:0 0 1.2rem}
+.vt-poll form{margin:0}
+.vt-poll .panel{position:relative;float:none!important;margin:0!important;padding:0!important;overflow:hidden;border:1px solid var(--vt-line)!important;border-radius:4px 18px 4px 18px!important;background:linear-gradient(160deg,var(--vt-surface),var(--vt-surface2))!important;box-shadow:var(--vt-shadow)}
+.vt-poll .panel::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--vt-blood-hot),var(--vt-gold-hot) 50%,var(--vt-blood))}
+.vt-poll .corners-top,.vt-poll .corners-bottom{display:none}
+.vt-poll .panel .inner{margin:0;padding:1.1rem 1.4rem 1.2rem 1.7rem;background:none!important}
+.vt-poll .content{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1rem;padding:0!important;background:none!important;color:var(--vt-text)}
+.vt-poll .content>.clear{display:none}
+.vt-poll h2.h3{display:flex;align-items:center;gap:.6rem;flex:1 1 220px;float:none!important;width:auto!important;margin:0!important;padding:0 0 .1rem!important;border:0!important;background:none!important;color:var(--vt-blood)!important;font-family:var(--vt-font-display)!important;font-size:1.2rem!important;font-weight:700!important;letter-spacing:.04em;overflow-wrap:anywhere}
+.vt-poll h2.h3::before{content:"";flex:none;width:1.25rem;height:1.25rem;background:var(--vt-gold);-webkit-mask:var(--ic-list) center/contain no-repeat;mask:var(--ic-list) center/contain no-repeat}
+:root[data-theme="dark"] .vt-poll h2.h3{color:#f6e6d6!important}
+.vt-poll p.right-box{float:none!important;margin:0!important;padding:0!important}
+.vt-poll p.right-box a{position:relative;display:inline-flex;align-items:center;justify-content:center;width:2.1rem;height:2.1rem;border:1px solid var(--vt-line);border-radius:10px 3px 10px 3px;background:var(--vt-surface);transition:transform .2s,border-color .2s,box-shadow .2s}
+.vt-poll p.right-box a::before{content:"";width:.95rem;height:.95rem;background:var(--vt-blood-hot);-webkit-mask:var(--ic-x) center/contain no-repeat;mask:var(--ic-x) center/contain no-repeat}
+.vt-poll p.right-box a img{position:absolute;inset:0;width:100%!important;height:100%!important;opacity:0!important}
+.vt-poll p.right-box a:hover{transform:translateY(-2px);border-color:var(--vt-blood-hot);box-shadow:0 6px 14px var(--vt-glow)}
+.vt-poll fieldset.polls{flex:1 1 100%;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .8rem;min-width:0;margin:.4rem 0 0!important;padding:0!important;border:0!important;background:none!important;color:var(--vt-muted);font-size:.8rem}
+.vt-poll fieldset.polls dl{display:flex;align-items:center;gap:.8rem;margin:0!important;padding:0!important;border:0!important;background:none!important;float:none!important;width:auto!important}
+.vt-poll fieldset.polls dt,.vt-poll fieldset.polls dd{float:none!important;width:auto!important;margin:0!important;padding:0!important;border:0!important;background:none!important}
+.vt-poll fieldset.polls dl:not([style*="border-top"]){flex:1 1 100%;padding:.65rem 1rem!important;border:1px solid var(--vt-line)!important;border-radius:4px 14px 4px 14px;background:var(--vt-surface)!important;transition:border-color .2s,box-shadow .2s,transform .2s}
+.vt-poll fieldset.polls dl:not([style*="border-top"]):hover{border-color:var(--vt-blood-hot)!important;transform:translateX(3px);box-shadow:0 6px 16px var(--vt-glow)}
+.vt-poll fieldset.polls dl:has(input:checked){border-color:var(--vt-blood)!important;background:linear-gradient(100deg,var(--vt-surface2),var(--vt-surface))!important}
+.vt-poll fieldset.polls dl:not([style*="border-top"]) dt{flex:1 1 auto;order:2;color:var(--vt-text);font-size:.95rem;font-weight:600;overflow-wrap:anywhere}
+.vt-poll fieldset.polls dl:not([style*="border-top"]) dd{flex:none;order:1;display:inline-flex}
+.vt-poll fieldset.polls input[type=checkbox],.vt-poll fieldset.polls input[type=radio]{-webkit-appearance:none;appearance:none;flex:none;width:1.35rem;height:1.35rem;margin:0;border:2px solid var(--vt-gold);border-radius:6px 2px 6px 2px;background:var(--vt-surface2) center/80% no-repeat;cursor:pointer;transition:background-color .2s,border-color .2s}
+.vt-poll fieldset.polls input[type=radio]{border-radius:50%}
+.vt-poll fieldset.polls input:checked{border-color:var(--vt-blood-hot);background-color:var(--vt-blood);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffe29a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E")}
+.vt-poll fieldset.polls dl[style*="border-top"] dt{display:none}
+.vt-poll fieldset.polls input.button1{-webkit-appearance:none;appearance:none;width:auto!important;padding:.6rem 1.6rem!important;border:0!important;border-radius:999px 4px 999px 4px!important;background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display)!important;font-size:.72rem!important;font-weight:700!important;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 4px 12px var(--vt-glow)!important;cursor:pointer;transition:transform .2s,filter .2s}
+.vt-poll fieldset.polls input.button1:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.vt-poll fieldset.polls dd.resultbar{display:inline-flex}
+.vt-poll fieldset.polls dd.resultbar strong{font-weight:700}
+.vt-poll fieldset.polls dd.resultbar a{color:var(--vt-blood)!important;font-family:var(--vt-font-display);font-size:.7rem;letter-spacing:.16em;text-decoration:none!important;text-transform:uppercase;border-bottom:1px solid currentColor}
+:root[data-theme="dark"] .vt-poll fieldset.polls dd.resultbar a{color:var(--vt-gold-hot)!important}
+.vt-poll fieldset.polls strong{color:var(--vt-blood)}
+:root[data-theme="dark"] .vt-poll fieldset.polls strong{color:var(--vt-gold-hot)}
+.vt-poll fieldset.polls dl[style*="border-top"]{margin-top:.45rem!important}
