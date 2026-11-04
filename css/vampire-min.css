@@ -1102,11 +1102,11 @@ body#phpbb{padding-top:var(--vt-nav-h)!important}
 #vt-nav-right #notif_unread{position:absolute;top:-5px;right:-5px;display:inline-flex;align-items:center;justify-content:center;min-width:1.15rem;height:1.15rem;padding:0 .3rem;border-radius:99px;background:var(--vt-gold-hot);color:#2a1a17;font-size:.62rem;font-weight:800;line-height:1;animation:vt-beacon 2.2s infinite}
 #vt-nav-right #notif_unread:empty{display:none}
 #vt-nav-right #notif_list{position:absolute!important;left:auto!important;right:0!important;top:calc(100% + 14px)!important;z-index:1100;width:330px;max-width:92vw;margin:0!important;padding:0!important;overflow:hidden;list-style:none;border:1px solid var(--vt-gold)!important;border-radius:14px!important;background:var(--vt-surface)!important;box-shadow:var(--vt-shadow),0 0 0 4px color-mix(in srgb,var(--vt-gold) 18%,transparent)!important;color:var(--vt-text);text-align:left}
-#vt-nav-right #notif_list li{float:none!important;margin:0!important;padding:.7rem 1rem!important;border:0!important;border-bottom:1px solid var(--vt-line)!important;background:none!important;list-style:none;font-size:.84rem;line-height:1.5;color:var(--vt-text)}
+#vt-nav-right #notif_list li{float:none!important;margin:0!important;padding:.7rem 1rem!important;border:0!important;border-bottom:1px solid var(--vt-line)!important;background-color:transparent!important;list-style:none;font-size:.84rem;line-height:1.5;color:var(--vt-text)}
 #vt-nav-right #notif_list li a{color:var(--vt-blood)!important;text-decoration:none!important}
 #vt-nav-right #notif_list li a:hover{color:var(--vt-gold-hot)!important}
-#vt-nav-right #notif_list li:hover{background:var(--vt-surface2)!important}
-#vt-nav-right #notif_list li.see_all{display:flex;justify-content:center;border-bottom:0!important;background:var(--vt-surface2)!important}
+#vt-nav-right #notif_list li:hover{background-color:var(--vt-surface2)!important}
+#vt-nav-right #notif_list li.see_all{display:flex;justify-content:center;border-bottom:0!important;background-color:var(--vt-surface2)!important}
 #vt-nav-right #notif_list li.see_all a{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--vt-font-display);font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 #vt-nav-right #notif_list li.see_all a::after{content:"";width:.8rem;height:.8rem;background:currentColor;-webkit-mask:var(--ic-jump) center/contain no-repeat;mask:var(--ic-jump) center/contain no-repeat}
 #vt-nav-right #live_notif{position:fixed!important;right:1rem!important;top:calc(var(--vt-nav-h) + 1.4rem)!important;z-index:1200;display:flex;flex-direction:column;gap:.5rem;width:min(330px,92vw)!important}
@@ -2038,3 +2038,11 @@ ul.vt-ip-list{display:flex;flex-direction:column;gap:.4rem;margin:0!important;pa
 :root[data-theme="dark"] #vt-nav-right #live_notif,:root[data-theme="dark"] #vt-nav-right #live_notif :is(span,div,p,em,i,b){color:var(--vt-text)!important}
 :root[data-theme="dark"] #vt-nav-right #live_notif a{color:var(--vt-blood-hot)!important;font-weight:700}
 :root[data-theme="dark"] #vt-nav-right #live_notif strong,:root[data-theme="dark"] #vt-nav-right #live_notif strong *{color:var(--vt-gold-hot)!important}
+
+/* 51. notifications: keep the delete (X) button, drawn by the theme */
+#vt-nav-right #notif_list li{position:relative;padding-right:2.8rem!important}
+#vt-nav-right #notif_list li.see_all{padding-right:1rem!important}
+#vt-nav-right #notif_list li :is(a,span,div,i,button,img)[class*="del" i],#vt-nav-right #notif_list li :is(a,span,div,i,button,img)[class*="remove" i],#vt-nav-right #notif_list li :is(a,span,div,i,button,img)[class*="close" i],#vt-nav-right #notif_list li :is(a,span,div,i,button,img)[class*="cross" i],#vt-nav-right #notif_list li :is(a,span,div,i,button,img)[id*="del" i],#vt-nav-right #notif_list li a[title*="delete" i],#vt-nav-right #notif_list li a[title*="remove" i]{position:absolute!important;top:.6rem!important;right:.7rem!important;left:auto!important;display:inline-flex!important;align-items:center;justify-content:center;width:1.6rem!important;height:1.6rem!important;margin:0!important;padding:0!important;overflow:hidden;border:1px solid var(--vt-line)!important;border-radius:8px 2px 8px 2px!important;background:var(--vt-surface2) none!important;font-size:0!important;line-height:0;text-indent:0;opacity:1!important;visibility:visible!important;cursor:pointer;transition:border-color .2s,transform .2s}
+#vt-nav-right #notif_list li :is([class*="del" i],[class*="remove" i],[class*="close" i],[class*="cross" i],[id*="del" i])::before{content:"";width:.75rem;height:.75rem;background:var(--vt-blood-hot);-webkit-mask:var(--ic-x) center/contain no-repeat;mask:var(--ic-x) center/contain no-repeat}
+#vt-nav-right #notif_list li :is([class*="del" i],[class*="remove" i],[class*="close" i],[class*="cross" i]) :is(img,i,svg){display:none!important}
+#vt-nav-right #notif_list li :is([class*="del" i],[class*="remove" i],[class*="close" i],[class*="cross" i]):hover{border-color:var(--vt-blood-hot)!important;transform:scale(1.08)}
