@@ -2216,3 +2216,26 @@ form#ucp #list_awards{display:flex!important;flex-wrap:wrap;justify-content:cent
 @media (max-width:640px){.vt-pf-list dl,form#ucp fieldset dl{grid-template-columns:1fr}.vt-wall-item{flex-direction:column}}
 fieldset.vt-stat ul{width:100%;box-sizing:border-box}
 fieldset.vt-stat li{width:100%;box-sizing:border-box}
+
+/* 56. profile: spacing under the header + contact icons drawn by the theme */
+.vt-prof-hero{margin:0 0 1.8rem!important}
+.vt-prof-hero .group-icon{display:none!important}
+.vt-prof-tabsbar{margin-top:0}
+.vt-pf-list dd>a,.vt-pf-list .field_uneditable>a{position:relative;display:inline-flex;align-items:center;justify-content:center;width:2.3rem;height:2.3rem;border:1px solid var(--vt-line);border-radius:10px 3px 10px 3px;background:var(--vt-surface2);text-decoration:none!important;transition:transform .2s,border-color .2s,box-shadow .2s}
+.vt-pf-list dd>a::before,.vt-pf-list .field_uneditable>a::before{content:"";width:1.05rem;height:1.05rem;background:var(--vt-blood-hot);-webkit-mask:var(--ic-link) center/contain no-repeat;mask:var(--ic-link) center/contain no-repeat}
+.vt-pf-list dd>a img,.vt-pf-list .field_uneditable>a img{position:absolute;inset:0;width:100%!important;height:100%!important;opacity:0!important}
+.vt-pf-list dd>a:hover,.vt-pf-list .field_uneditable>a:hover{transform:translateY(-2px);border-color:var(--vt-blood-hot);box-shadow:0 6px 14px var(--vt-glow)}
+.vt-pf-list a:has(img[src*="contact_email"])::before{-webkit-mask-image:var(--ic-mail);mask-image:var(--ic-mail)}
+.vt-pf-list a:has(img[src*="contact_pm"])::before{-webkit-mask-image:var(--ic-chat);mask-image:var(--ic-chat)}
+.vt-pf-list a:has(img[src*="contact_www"])::before{-webkit-mask-image:var(--ic-globe);mask-image:var(--ic-globe)}
+.vt-pf-list a:has(img[src*="contact_fb"])::before{-webkit-mask-image:var(--ic-fb);mask-image:var(--ic-fb)}
+.vt-pf-list a:has(img[src*="contact_twitter"])::before{-webkit-mask-image:var(--ic-x);mask-image:var(--ic-x)}
+.vt-pf-list a:has(img[src*="contact_pinterest"])::before{-webkit-mask-image:var(--ic-pin);mask-image:var(--ic-pin)}
+.vt-pf-list a:has(img[src*="contact_skype"])::before{-webkit-mask-image:var(--ic-phone);mask-image:var(--ic-phone)}
+.vt-pf-list a:has(img[src*="contact_"]):hover::before{background:var(--vt-gold-hot)}
+.vt-pf-list .ajax-profil_parent{display:flex;align-items:center;gap:.5rem}
+.vt-pf-list .ajax-profil_edit{position:relative;display:inline-flex;align-items:center;justify-content:center;width:1.7rem;height:1.7rem;border:1px solid var(--vt-line);border-radius:50%;background:var(--vt-surface);cursor:pointer}
+.vt-pf-list .ajax-profil_edit::before{content:"";width:.8rem;height:.8rem;background:var(--vt-gold);-webkit-mask:var(--ic-edit) center/contain no-repeat;mask:var(--ic-edit) center/contain no-repeat}
+.vt-pf-list .ajax-profil_edit img{position:absolute;inset:0;width:100%!important;height:100%!important;opacity:0!important}
+.vt-pf-list .field_editable.invisible{display:none}
+.vt-pf-list dl{align-items:center!important}
