@@ -2239,3 +2239,19 @@ fieldset.vt-stat li{width:100%;box-sizing:border-box}
 .vt-pf-list .ajax-profil_edit img{position:absolute;inset:0;width:100%!important;height:100%!important;opacity:0!important}
 .vt-pf-list .field_editable.invisible{display:none}
 .vt-pf-list dl{align-items:center!important}
+
+/* 57. profile body: readable labels, values and links in both themes */
+.vt-prof-body,.vt-prof-body dd,.vt-prof-body li{color:var(--vt-text)}
+.vt-prof-body{font-size:.94rem;line-height:1.65}
+.vt-pf-list dt,.vt-pf-list dt *{color:var(--vt-gold)!important;font-family:var(--vt-font-display)!important;font-weight:700!important}
+:root[data-theme="dark"] .vt-pf-list dt,:root[data-theme="dark"] .vt-pf-list dt *{color:var(--vt-gold-hot)!important}
+.vt-pf-list dd{color:var(--vt-text)!important;font-family:inherit!important;font-size:.95rem!important;text-align:left!important}
+.vt-pf-list dd *{color:inherit}
+.vt-prof-body a:not(.vt-wall-foot a):not(.vt-btn):not(.followBtn):not(.vt-newmsg a){color:var(--vt-blood)!important;font-weight:700;text-decoration:none}
+.vt-prof-body a:not(.vt-wall-foot a):not(.vt-btn):not(.followBtn):not(.vt-newmsg a):hover{color:var(--vt-blood-hot)!important;text-decoration:underline;text-underline-offset:3px}
+:root[data-theme="dark"] .vt-prof-body a:not(.vt-wall-foot a):not(.vt-btn):not(.followBtn):not(.vt-newmsg a){color:var(--vt-gold-hot)!important}
+:root[data-theme="dark"] .vt-prof-body a:not(.vt-wall-foot a):not(.vt-btn):not(.followBtn):not(.vt-newmsg a):hover{color:#fff!important}
+.vt-pf-list a:has(img){text-decoration:none!important}
+:root[data-theme="dark"] .vt-prof-tabtitle,:root[data-theme="dark"] .vt-prof-tabtitle *{color:var(--vt-gold-hot)!important}
+.vt-prof-tabtitle .group-icon{display:none!important}
+.vt-prof-body .italic,.vt-prof-body em{color:var(--vt-muted)}
