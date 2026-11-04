@@ -2025,3 +2025,16 @@ ul.vt-ip-list{display:flex;flex-direction:column;gap:.4rem;margin:0!important;pa
 .vt-rep-row>span:nth-child(n+3){grid-column:2}
 .vt-report-body{grid-template-columns:1fr}
 }
+
+/* 50. notifications: readable text, links and usernames in dark mode */
+#vt-nav-right #notif_list .group-icon,#vt-nav-right #live_notif .group-icon{display:none!important}
+:root[data-theme="dark"] #vt-nav-right #notif_list li,:root[data-theme="dark"] #vt-nav-right #notif_list li :is(span,div,p,em,i,b){color:var(--vt-text)!important}
+:root[data-theme="dark"] #vt-nav-right #notif_list li a{color:var(--vt-blood-hot)!important;font-weight:700;text-decoration:none!important;border-bottom:1px dotted color-mix(in srgb,var(--vt-blood-hot) 60%,transparent)}
+:root[data-theme="dark"] #vt-nav-right #notif_list li a:hover{color:var(--vt-gold-hot)!important;border-bottom-color:var(--vt-gold-hot)}
+:root[data-theme="dark"] #vt-nav-right #notif_list li strong,:root[data-theme="dark"] #vt-nav-right #notif_list li strong *{color:var(--vt-gold-hot)!important;font-family:var(--vt-font-display);font-weight:800;letter-spacing:.03em}
+:root[data-theme="dark"] #vt-nav-right #notif_list li :is(.notif_time,.time,small,.gensmall){color:var(--vt-muted)!important;font-size:.76rem}
+:root[data-theme="dark"] #vt-nav-right #notif_list li.see_all a{color:var(--vt-gold-hot)!important;border-bottom:0}
+:root[data-theme="dark"] #vt-nav-right #notif_list li:hover{background:color-mix(in srgb,var(--vt-blood) 14%,var(--vt-surface2))!important}
+:root[data-theme="dark"] #vt-nav-right #live_notif,:root[data-theme="dark"] #vt-nav-right #live_notif :is(span,div,p,em,i,b){color:var(--vt-text)!important}
+:root[data-theme="dark"] #vt-nav-right #live_notif a{color:var(--vt-blood-hot)!important;font-weight:700}
+:root[data-theme="dark"] #vt-nav-right #live_notif strong,:root[data-theme="dark"] #vt-nav-right #live_notif strong *{color:var(--vt-gold-hot)!important}
