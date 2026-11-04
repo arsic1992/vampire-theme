@@ -2046,3 +2046,32 @@ ul.vt-ip-list{display:flex;flex-direction:column;gap:.4rem;margin:0!important;pa
 #vt-nav-right #notif_list li :is([class*="del" i],[class*="remove" i],[class*="close" i],[class*="cross" i],[id*="del" i])::before{content:"";width:.75rem;height:.75rem;background:var(--vt-blood-hot);-webkit-mask:var(--ic-x) center/contain no-repeat;mask:var(--ic-x) center/contain no-repeat}
 #vt-nav-right #notif_list li :is([class*="del" i],[class*="remove" i],[class*="close" i],[class*="cross" i]) :is(img,i,svg){display:none!important}
 #vt-nav-right #notif_list li :is([class*="del" i],[class*="remove" i],[class*="close" i],[class*="cross" i]):hover{border-color:var(--vt-blood-hot)!important;transform:scale(1.08)}
+
+/* 52. posting_preview, posting_topic_review, privmsg_topic_review */
+.vt-rev-h{display:flex;align-items:center;gap:.7rem;margin:.8rem 0 .7rem!important;padding:0!important;border:0!important;background:none!important;color:var(--vt-blood)!important;font-family:var(--vt-font-display)!important;font-size:.95rem!important;font-weight:800!important;letter-spacing:.18em;text-transform:uppercase}
+.vt-rev-h::before{content:"";width:1.1rem;height:1.1rem;background:var(--vt-gold);-webkit-mask:var(--ic-clock) center/contain no-repeat;mask:var(--ic-clock) center/contain no-repeat}
+:root[data-theme="dark"] .vt-rev-h{color:var(--vt-gold-hot)!important}
+.vt-prev{margin:0 0 .6rem}
+.vt-rev-list{display:flex;flex-direction:column;gap:.6rem;margin:0 0 1rem}
+.vt-rev{position:relative;display:flex;align-items:flex-start;gap:1.2rem;float:none!important;width:auto!important;margin:0!important;padding:.95rem 1.2rem .95rem 1.5rem!important;overflow:hidden;border:1px solid var(--vt-line)!important;border-left:4px solid var(--vt-gold)!important;border-radius:4px 14px 4px 14px!important;background:var(--vt-surface)!important;box-shadow:var(--vt-shadow);color:var(--vt-text)}
+.vt-rev.row2{background:var(--vt-surface2)!important}
+.vt-rev--preview{border-left-color:var(--vt-blood-hot)!important}
+.vt-rev.curr_privmsg{border-left-color:var(--vt-blood-hot)!important;background:linear-gradient(100deg,var(--vt-surface2),var(--vt-surface))!important}
+.vt-rev--hidden{justify-content:center;border-style:dashed!important;color:var(--vt-muted);font-style:italic}
+.vt-rev--hidden p{margin:0!important}
+.vt-rev .vt-rev-body{flex:1 1 auto;float:none!important;width:auto!important;min-width:0;margin:0!important;padding:0!important;background:none!important;border:0!important}
+.vt-rev-head{margin:0 0 .55rem;padding:0 0 .5rem;border-bottom:1px dashed var(--vt-line)}
+.vt-rev-subject{margin:0!important;padding:0!important;border:0!important;background:none!important;color:var(--vt-blood)!important;font-family:var(--vt-font-display)!important;font-size:1.02rem!important;font-weight:700!important;letter-spacing:.03em}
+:root[data-theme="dark"] .vt-rev-subject{color:#f6e6d6!important}
+.vt-rev-meta{margin:.15rem 0 0!important;color:var(--vt-muted);font-size:.76rem}
+.vt-rev-meta img{display:none}
+.vt-rev-meta a,.vt-rev-meta strong{color:var(--vt-blood)!important;font-weight:700;text-decoration:none!important}
+:root[data-theme="dark"] .vt-rev-meta a,:root[data-theme="dark"] .vt-rev-meta strong{color:var(--vt-gold-hot)!important}
+.vt-rev-text{font-size:.92rem;line-height:1.7;overflow-wrap:anywhere}
+.vt-rev-who{flex:none;width:96px;text-align:center}
+.vt-rev-who .postprofile{float:none!important;width:auto!important;margin:0!important;padding:0!important;border:0!important;background:none!important;font-size:.76rem;font-weight:700;overflow-wrap:anywhere}
+.vt-rev-who dt{margin:0;padding:0}
+.vt-rev-who img{display:block;width:56px!important;height:56px!important;max-width:56px!important;max-height:56px!important;margin:0 auto .3rem;object-fit:cover;border:2px solid var(--vt-gold);border-radius:50%}
+hr.vt-rev-rule{height:0;margin:.6rem 0 1rem;border:0;border-top:2px dotted var(--vt-gold)}
+.vt-rev-pages.pagination{margin:.4rem 0}
+@media (max-width:560px){.vt-rev--pm{flex-direction:column-reverse}.vt-rev-who{width:auto;display:flex;align-items:center;gap:.6rem}.vt-rev-who img{margin:0}}
