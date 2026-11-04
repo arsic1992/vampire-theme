@@ -2299,3 +2299,57 @@ form#ucp>.panel.vt-ucp-sec,form#ucp .panel.vt-ucp-sec{margin:0 0 .6rem!important
 .vt-ucp-card ul.profile_field_list li{margin:0!important;padding:0!important;border:0!important;background:none!important;list-style:none!important}
 .vt-ucp-card .vt-check img{width:auto!important;height:auto!important;max-height:1.1rem}
 .vt-ucp-card select{max-width:100%;font-size:.86rem}
+
+/* 59. signature editor, avatar upload, friends/foes, followed members (markup rendered by other templates) */
+.ucp-main .corners-top,.ucp-main .corners-bottom,.panel.row3:has(>.inner>.ucp-main) .corners-top,.panel.row3:has(>.inner>.ucp-main) .corners-bottom{display:none!important}
+.ucp-main>.panel,.vt-ucp-card .panel{float:none!important;margin:0 0 .6rem!important;padding:0!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;color:var(--vt-text)}
+.ucp-main>.panel>.inner,.vt-ucp-card .panel>.inner{margin:0!important;padding:0!important;background:none!important}
+.ucp-main>h1.page-title{display:flex;align-items:center;gap:.7rem;margin:1.2rem 0 .5rem!important;padding:0!important;border:0!important;background:none!important;color:var(--vt-blood)!important;font-family:var(--vt-font-display)!important;font-size:1.05rem!important;font-weight:800!important;letter-spacing:.16em;text-transform:uppercase}
+.ucp-main>h1.page-title:first-child{margin-top:.2rem!important}
+.ucp-main>h1.page-title::before{content:"";flex:none;width:7px;height:7px;background:var(--vt-gold);transform:rotate(45deg)}
+:root[data-theme="dark"] .ucp-main>h1.page-title{color:var(--vt-gold-hot)!important}
+.ucp-main p{color:var(--vt-muted)!important;font-size:.84rem;line-height:1.6}
+.ucp-main fieldset{min-width:0;margin:0!important;padding:0!important;border:0!important;background:none!important}
+.ucp-main fieldset>dl:not(.vt-ucp-row){display:grid;grid-template-columns:230px minmax(0,1fr);gap:.4rem 1rem;align-items:center;margin:0!important;padding:.7rem 0;border-bottom:1px dashed var(--vt-line)}
+.ucp-main fieldset>dl:not(.vt-ucp-row):last-child{border-bottom:0}
+.ucp-main fieldset>dl:not(.vt-ucp-row)>dt,.ucp-main fieldset>dl:not(.vt-ucp-row)>dd{float:none!important;width:auto!important;margin:0!important;padding:0!important}
+.ucp-main fieldset>dl:not(.vt-ucp-row)>dt,.ucp-main fieldset>dl:not(.vt-ucp-row)>dt label{color:var(--vt-gold)!important;font-family:var(--vt-font-display)!important;font-size:.68rem;font-weight:700!important;letter-spacing:.14em;text-transform:uppercase}
+:root[data-theme="dark"] .ucp-main fieldset>dl:not(.vt-ucp-row)>dt,:root[data-theme="dark"] .ucp-main fieldset>dl:not(.vt-ucp-row)>dt label{color:var(--vt-gold-hot)!important}
+.ucp-main fieldset>dl:not(.vt-ucp-row)>dd{color:var(--vt-text)!important;font-size:.92rem}
+.ucp-main dd em{color:var(--vt-muted)!important;font-style:italic}
+.ucp-main dd form{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:0}
+.ucp-main dd form br{display:none}
+.ucp-main dd form input.inputbox{flex:1 1 220px;width:auto!important;max-width:340px}
+.ucp-main input.inputbox:not([type=file]),.vt-ucp-card input[type=text],.vt-ucp-card input[type=password]{box-sizing:border-box;padding:.5rem .9rem;border:1px solid var(--vt-line)!important;border-radius:999px 4px 999px 4px;background:var(--vt-surface2)!important;color:var(--vt-text)!important;font:inherit;font-size:.9rem}
+.ucp-main input.inputbox:focus{border-color:var(--vt-blood-hot)!important;box-shadow:0 0 0 3px var(--vt-glow);outline:0}
+/* theme buttons for any legacy button inside the card */
+.vt-ucp-card :is(input.button1,input.button2,input[type=submit],input[type=reset],input[type=button]):not(.vt-btn){-webkit-appearance:none;appearance:none;width:auto!important;height:auto!important;margin:0;padding:.55rem 1.5rem!important;border:0!important;border-radius:999px 4px 999px 4px!important;background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display)!important;font-size:.7rem!important;font-weight:700!important;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:none!important;transition:transform .2s,filter .2s}
+.vt-ucp-card input.button2:not(.vt-btn),.vt-ucp-card input[type=button]:not(.vt-btn){background:var(--vt-surface2)!important;border:1px solid var(--vt-gold)!important;color:var(--vt-blood)!important}
+:root[data-theme="dark"] .vt-ucp-card input.button2:not(.vt-btn),:root[data-theme="dark"] .vt-ucp-card input[type=button]:not(.vt-btn){color:var(--vt-gold-hot)!important}
+.vt-ucp-card :is(input.button1,input.button2,input[type=submit],input[type=reset],input[type=button]):not(.vt-btn):hover{transform:translateY(-2px);filter:brightness(1.12)}
+.vt-ucp-card fieldset.submit-buttons,.vt-ucp-card .submit-buttons{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.6rem;margin:.8rem 0 0!important;padding:.8rem 0 0!important;border:0!important;border-top:1px dashed var(--vt-line)!important;background:none!important}
+/* avatar / file upload: full width, readable file name */
+.vt-ucp-card input[type=file]{box-sizing:border-box;flex:1 1 100%;width:100%!important;max-width:100%!important;min-width:0;padding:.3rem!important;border:1px dashed var(--vt-gold)!important;border-radius:12px!important;background:var(--vt-surface2)!important;color:var(--vt-text)!important;font:inherit;font-size:.86rem;text-overflow:clip;overflow:visible}
+.vt-ucp-card input[type=file]::file-selector-button{margin-right:.8rem;padding:.45rem 1.2rem;border:0;border-radius:999px 3px 999px 3px;background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c));color:var(--vt-head-text);font-family:var(--vt-font-display);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.vt-ucp-card .vt-ucp-val input.vt-input[type=text]{flex:1 1 280px;width:auto!important;min-width:0}
+/* followed members: empty state / list holder */
+.followers_block{padding:1.1rem 1.2rem!important;border:1px dashed var(--vt-line)!important;border-radius:4px 14px 4px 14px;background:var(--vt-surface2)!important;color:var(--vt-muted)!important;font-style:italic;text-align:center}
+.followers_block a{color:var(--vt-blood)!important;font-weight:700}
+:root[data-theme="dark"] .followers_block a{color:var(--vt-gold-hot)!important}
+/* signature editor (postingbox rendered inside the edit card) */
+.vt-ucp-card #postingbox{margin:0!important;padding:0!important;border:0!important;background:none!important}
+.vt-ucp-card #postingbox fieldset.fields1{margin:0!important;padding:0!important;border:0!important;background:none!important}
+.vt-ucp-card #parent_editor_simple{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:1rem;align-items:start}
+.vt-ucp-card #parent_editor_simple>.clear{display:none}
+.vt-ucp-card #message-box{order:1;float:none!important;width:auto!important;min-width:0;margin:0!important;padding:0!important;background:none!important}
+.vt-ucp-card #message-box>br{display:none}
+.vt-ucp-card #message-box .left-box{float:none!important;margin:0}
+.vt-ucp-card #message-box .left-box:has(#helpbox:empty){display:none}
+.vt-ucp-card #textarea_content{width:100%!important;margin:0}
+.vt-ucp-card #smiley-box{order:2;float:none!important;width:auto!important;margin:0!important;padding:.6rem!important;border:1px solid var(--vt-line)!important;border-radius:4px 14px 4px 14px!important;background:var(--vt-surface2)!important;box-shadow:none!important;color:var(--vt-muted)!important;font-size:.76rem;line-height:1.7}
+.vt-ucp-card #smiley-box a{color:var(--vt-blood)!important;font-weight:700}
+:root[data-theme="dark"] .vt-ucp-card #smiley-box a{color:var(--vt-gold-hot)!important}
+.vt-ucp-card #smileyContainer{margin:0 0 .5rem;overflow:hidden;border-radius:8px;background:none!important}
+.vt-ucp-card #smileyContainer iframe{display:block;width:100%!important;height:280px;border:0;border-radius:8px;background:var(--vt-surface)!important}
+@media(max-width:760px){.vt-ucp-card #parent_editor_simple{grid-template-columns:1fr}.vt-ucp-card #smiley-box{order:3}.ucp-main fieldset>dl:not(.vt-ucp-row){grid-template-columns:1fr}}
+.vt-ucp-card .followers_block.panel{padding:1.1rem 1.2rem!important;border:1px dashed var(--vt-line)!important;border-radius:4px 14px 4px 14px!important;background:var(--vt-surface2)!important}
