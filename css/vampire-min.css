@@ -2525,3 +2525,35 @@ img.sprite-arrow_prosilver_up{display:inline-block;width:30px;height:30px;vertic
 .forabg ul.topiclist li.row dl.icon::before,.forabg ul.topiclist li.row dl.icon::after{display:block!important;visibility:visible!important;opacity:1!important;float:none!important;clear:none!important;position:absolute!important;top:50%!important;overflow:visible;line-height:0;font-size:0}
 .forabg ul.topiclist li.row dl.icon::after{width:24px!important;height:24px!important;margin-top:-12px!important;left:calc(1.05rem + 11px)!important;background:var(--ic-fill)!important;-webkit-mask:var(--ic) center/contain no-repeat!important;mask:var(--ic) center/contain no-repeat!important}
 .forabg ul.topiclist li.row dl.icon::before{width:42px!important;height:48px!important;margin-top:-24px!important;left:calc(1.05rem + 2px)!important;background:var(--inner)!important}
+
+/* 63. search results as posts (div.search.post > .postbody + dl.postprofile) */
+h1.page-title:has(+.search.post),h1.page-title:has(+p+.search.post){display:flex;align-items:center;gap:.7rem;margin:.4rem 0 1rem!important;padding:0!important;border:0!important;background:none!important;color:var(--vt-blood)!important;font-family:var(--vt-font-display)!important;font-size:1.2rem!important;font-weight:800!important;letter-spacing:.08em}
+h1.page-title:has(+.search.post)::before{content:"";flex:none;width:8px;height:8px;background:var(--vt-gold);transform:rotate(45deg)}
+:root[data-theme="dark"] h1.page-title:has(+.search.post){color:var(--vt-gold-hot)!important}
+div.search.post{position:relative;float:none!important;width:auto!important;margin:0 0 .9rem!important;padding:0!important;overflow:hidden;border:1px solid var(--vt-line)!important;border-radius:4px 18px 4px 18px!important;background:linear-gradient(160deg,var(--vt-surface),var(--vt-surface2))!important;box-shadow:var(--vt-shadow);color:var(--vt-text)}
+div.search.post::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--vt-blood-hot),var(--vt-gold-hot) 50%,var(--vt-blood))}
+div.search.post>.inner{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:0 1.4rem;margin:0!important;padding:1rem 1.3rem 1rem 1.7rem!important;background:none!important}
+div.search.post .corners-top,div.search.post .corners-bottom{display:none}
+div.search.post .postbody{order:1;float:none!important;width:auto!important;min-width:0;margin:0!important;padding:0!important;overflow:hidden;color:var(--vt-text)!important;font-size:.9rem;line-height:1.65}
+div.search.post .postbody img{max-width:100%;height:auto}
+div.search.post .postbody a{color:var(--vt-blood);font-weight:600;text-decoration:none;overflow-wrap:anywhere}
+:root[data-theme="dark"] div.search.post .postbody a{color:var(--vt-gold-hot)}
+div.search.post .postbody a:hover{text-decoration:underline;text-underline-offset:3px}
+div.search.post h2.h3{margin:0 0 .6rem!important;padding:0 0 .45rem!important;border:0!important;border-bottom:2px solid var(--vt-gold)!important;background:none!important;font-family:var(--vt-font-display)!important;font-size:1.05rem!important;font-weight:700!important;letter-spacing:.04em;text-transform:none!important}
+div.search.post h2.h3 a{color:var(--vt-text)!important;text-decoration:none}
+div.search.post h2.h3 a:hover{color:var(--vt-blood-hot)!important}
+div.search.post dl.postprofile{order:2;float:none!important;width:auto!important;margin:0!important;padding:0 0 0 1.2rem!important;border:0!important;border-left:1px dashed var(--vt-line)!important;background:none!important;color:var(--vt-muted)!important;font-size:.78rem;line-height:1.6;min-height:0}
+div.search.post dl.postprofile dt,div.search.post dl.postprofile dd{float:none!important;margin:0 0 .3rem!important;padding:0!important;border:0!important;background:none!important;color:var(--vt-muted)!important}
+div.search.post dl.postprofile dt.author{margin-bottom:.15rem!important;font-size:.82rem}
+div.search.post dl.postprofile dd:nth-child(3){display:none}
+div.search.post dl.postprofile strong{color:var(--vt-text);font-weight:700}
+div.search.post dl.postprofile a{color:var(--vt-blood);font-weight:700;text-decoration:none}
+:root[data-theme="dark"] div.search.post dl.postprofile a{color:var(--vt-gold-hot)}
+div.search.post dl.postprofile a:hover{text-decoration:underline;text-underline-offset:3px}
+div.search.post .group-icon{display:none}
+@media(max-width:760px){div.search.post>.inner{grid-template-columns:1fr}div.search.post dl.postprofile{order:3;margin-top:.7rem!important;padding:.7rem 0 0!important;border-left:0!important;border-top:1px dashed var(--vt-line)!important}}
+/* 63b. "Jump to" box under result lists */
+form[name="jumpbox"]>p.right{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.5rem;margin:.6rem 0 1rem!important;color:var(--vt-muted)}
+form[name="jumpbox"] select{max-width:100%;padding:.45rem .9rem;border:1px solid var(--vt-line);border-radius:999px 4px 999px 4px;background:var(--vt-surface2);color:var(--vt-text);font:inherit;font-size:.85rem}
+form[name="jumpbox"] select:focus{border-color:var(--vt-blood-hot);box-shadow:0 0 0 3px var(--vt-glow);outline:0}
+form[name="jumpbox"] input.button2{-webkit-appearance:none;appearance:none;padding:.45rem 1.2rem!important;border:0!important;border-radius:999px 4px 999px 4px!important;background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display)!important;font-size:.68rem!important;font-weight:700!important;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
