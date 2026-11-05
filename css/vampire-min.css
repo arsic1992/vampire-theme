@@ -2598,3 +2598,7 @@ li.vt-feed-item.same-user-next::after{content:""!important;display:block!importa
 .vt-feed-end span::before,.vt-feed-end span::after{content:"\25C6";margin:0 .7rem;color:var(--vt-gold);font-size:.6rem;font-style:normal}
 .vt-feed .vt-feed-day ul.topiclist li.header dl{display:block!important;padding:0!important;border:0!important;min-height:0!important}
 .vt-feed .vt-feed-day ul.topiclist li.header dd{font-size:inherit!important;letter-spacing:normal;text-transform:none}
+/* 64b. the board's own avatar bubble (blue ring) was drawn on pseudo-elements: remove it, keep only the themed avatar */
+li.vt-feed-item:not(.same-user-next)::after,.vt-feed-time::before,.vt-feed-time::after,.vt-feed-text::before,.vt-feed-text::after,.vt-feed-list::before,.vt-feed-list::after{content:none!important;display:none!important;background:none!important;border:0!important}
+li.vt-feed-item.same-user-next::after{display:block!important}
+li.vt-feed-item>*:not(.vt-feed-time):not(.vt-feed-text){display:none!important}
