@@ -2762,3 +2762,11 @@ h1.vt-confirm-head{margin:0!important;padding:0!important;border:0!important;bac
 .vt-crypt--gallery .image_item a.text_overlay .innerTitle>div{display:block!important;overflow:hidden;font-size:.78rem!important;text-overflow:ellipsis;white-space:nowrap;opacity:1!important;visibility:visible!important}
 .vt-crypt--gallery .image_item:hover a.text_overlay{opacity:1!important;visibility:visible!important;transform:none!important}
 .vt-crypt--gallery .image_item a.text_overlay::before,.vt-crypt--gallery .image_item a.text_overlay::after{content:none!important;display:none!important}
+
+/* 71. greeting_popup (birthday etc.) */
+.vt-popup-seal--greet::before{-webkit-mask-image:var(--ic-crown);mask-image:var(--ic-crown)}
+.vt-popup-card--greet{max-width:460px}
+.vt-greet-title{margin:0!important;color:var(--vt-gold);font-family:var(--vt-font-display);font-size:.78rem;font-weight:800;letter-spacing:.24em;text-align:center;text-transform:uppercase}
+:root[data-theme="dark"] .vt-greet-title{color:var(--vt-gold-hot)}
+.vt-greet-title::after{content:"";display:block;width:3.2rem;height:2px;margin:.55rem auto 0;background:linear-gradient(90deg,transparent,var(--vt-gold),transparent)}
+.vt-greet-msg{font-size:1.1rem!important;text-align:center}
