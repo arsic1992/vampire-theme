@@ -2729,3 +2729,16 @@ dl.vt-pv-row dd textarea.vt-input{width:100%!important}
 .vt-content :is(h2,h3,h4).post-content,.vt-content dl.codebox dt,.vt-content blockquote cite,.vt-content ol>li::marker{font-family:var(--vt-font-display)!important}
 .vt-content dl.codebox code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace!important}
 .vt-content{font-weight:500}
+
+/* 69. confirm_body (yes / no questions) */
+.vt-confirm--ask .vt-confirm-seal::before{-webkit-mask-image:var(--ic-stake);mask-image:var(--ic-stake)}
+h1.vt-confirm-head{margin:0!important;padding:0!important;border:0!important;background:none!important;color:var(--vt-blood)!important;font-family:var(--vt-font-display)!important;font-size:1.25rem!important;font-weight:800!important;letter-spacing:.1em;text-align:center;text-transform:uppercase}
+:root[data-theme="dark"] h1.vt-confirm-head{color:var(--vt-gold-hot)!important}
+.vt-confirm--ask .vt-confirm-text{width:100%;text-align:center}
+.vt-confirm--ask .vt-confirm-explain{margin-top:0!important;color:var(--vt-text);font-size:1rem;line-height:1.7}
+.vt-confirm--ask .vt-confirm-explain a{color:var(--vt-blood);font-weight:700}
+:root[data-theme="dark"] .vt-confirm--ask .vt-confirm-explain a{color:var(--vt-gold-hot)}
+.vt-confirm-extra{margin-top:.8rem;color:var(--vt-text);font-size:.9rem}
+.vt-confirm-extra:empty{display:none}
+.vt-confirm-extra :is(input[type=text],input[type=password],select,textarea){box-sizing:border-box;max-width:100%;padding:.5rem .9rem;border:1px solid var(--vt-line);border-radius:999px 4px 999px 4px;background:var(--vt-surface2);color:var(--vt-text);font:inherit}
+.vt-confirm-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin:0!important;padding:0!important;border:0!important;background:none!important}
