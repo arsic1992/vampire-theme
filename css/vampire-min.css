@@ -2602,3 +2602,7 @@ li.vt-feed-item.same-user-next::after{content:""!important;display:block!importa
 li.vt-feed-item:not(.same-user-next)::after,.vt-feed-time::before,.vt-feed-time::after,.vt-feed-text::before,.vt-feed-text::after,.vt-feed-list::before,.vt-feed-list::after{content:none!important;display:none!important;background:none!important;border:0!important}
 li.vt-feed-item.same-user-next::after{display:block!important}
 li.vt-feed-item>*:not(.vt-feed-time):not(.vt-feed-text){display:none!important}
+/* 65. previous/next topic pills: drop the board's small sprite arrow, keep the themed arrow */
+.vt-hop a>img[class*="sprite-arrow"]{display:none!important}
+.vt-hop-prev:has(>img),.vt-hop-next:has(>img){min-width:3.2rem;justify-content:center;padding:.35rem 1.1rem}
+.vt-hop-prev:has(>img)::before,.vt-hop-next:has(>img)::after{width:.9rem;height:.9rem}
