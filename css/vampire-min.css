@@ -2353,3 +2353,10 @@ form#ucp>.panel.vt-ucp-sec,form#ucp .panel.vt-ucp-sec{margin:0 0 .6rem!important
 .vt-ucp-card #smileyContainer iframe{display:block;width:100%!important;height:280px;border:0;border-radius:8px;background:var(--vt-surface)!important}
 @media(max-width:760px){.vt-ucp-card #parent_editor_simple{grid-template-columns:1fr}.vt-ucp-card #smiley-box{order:3}.ucp-main fieldset>dl:not(.vt-ucp-row){grid-template-columns:1fr}}
 .vt-ucp-card .followers_block.panel{padding:1.1rem 1.2rem!important;border:1px dashed var(--vt-line)!important;border-radius:4px 14px 4px 14px!important;background:var(--vt-surface2)!important}
+
+/* 59b. buttons on the friends/foes pages: those pages are not inside .vt-ucp-card, so scope to .ucp-main too */
+.ucp-main :is(input.button1,input.button2,input[type=submit],input[type=reset],input[type=button]):not(.vt-btn){-webkit-appearance:none;appearance:none;width:auto!important;height:auto!important;margin:0;padding:.55rem 1.5rem!important;border:0!important;border-radius:999px 4px 999px 4px!important;background:linear-gradient(100deg,var(--vt-head-b),var(--vt-head-c))!important;color:var(--vt-head-text)!important;font-family:var(--vt-font-display)!important;font-size:.7rem!important;font-weight:700!important;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:none!important;transition:transform .2s,filter .2s}
+.ucp-main input.button2:not(.vt-btn),.ucp-main input[type=button]:not(.vt-btn){background:var(--vt-surface2)!important;border:1px solid var(--vt-gold)!important;color:var(--vt-blood)!important}
+:root[data-theme="dark"] .ucp-main input.button2:not(.vt-btn),:root[data-theme="dark"] .ucp-main input[type=button]:not(.vt-btn){color:var(--vt-gold-hot)!important}
+.ucp-main :is(input.button1,input.button2,input[type=submit],input[type=button]):not(.vt-btn):hover{transform:translateY(-2px);filter:brightness(1.12)}
+.ucp-main :is(input.button1,input.button2,input[type=submit],input[type=button]):not(.vt-btn):focus-visible{outline:2px solid var(--vt-gold-hot);outline-offset:2px}
