@@ -2606,3 +2606,10 @@ li.vt-feed-item>*:not(.vt-feed-time):not(.vt-feed-text){display:none!important}
 .vt-hop a>img[class*="sprite-arrow"]{display:none!important}
 .vt-hop-prev:has(>img),.vt-hop-next:has(>img){min-width:3.2rem;justify-content:center;padding:.35rem 1.1rem}
 .vt-hop-prev:has(>img)::before,.vt-hop-next:has(>img)::after{width:.9rem;height:.9rem}
+/* 66. split-posts list: the legacy #topicreview box has a fixed height + scroll, which squashed the flex children */
+#topicreview.vt-split-posts{height:auto!important;max-height:none!important;min-height:0!important;overflow:visible!important;padding:0!important;border:0!important;background:none!important}
+.vt-split-post.post{flex:none!important;height:auto!important;max-height:none!important;min-height:0}
+.vt-split-post .postbody img{max-width:100%;height:auto;vertical-align:middle}
+.vt-split-text{display:flex;flex-wrap:wrap;align-items:flex-start;gap:.4rem;overflow:hidden}
+.vt-split-text:not(:has(>img,>a>img)){display:block}
+.vt-split-author{display:block!important}
