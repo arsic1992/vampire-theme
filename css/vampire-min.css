@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap");
 /* ==========================================================
    VAMPIRE THEME - vampire-min.css
    1. Tokens   (LIGHT = default, dark via <html data-theme="dark">)
@@ -2721,3 +2722,10 @@ dl.vt-pv-row dd textarea.vt-input{width:100%!important}
 .vt-content h2.post-content{font-size:1.55rem!important}
 .vt-content h3.post-content{font-size:1.15rem!important}
 .vt-content h4.post-content{font-size:1.05rem!important}
+
+/* 68c. post text font: Nunito (change the first name to try another font) */
+:root{--vt-font-text:Nunito,"Segoe UI",system-ui,-apple-system,sans-serif}
+.vt-content,.vt-content :is(p,span,div,li,td,dd,a,blockquote,cite){font-family:var(--vt-font-text)}
+.vt-content :is(h2,h3,h4).post-content,.vt-content dl.codebox dt,.vt-content blockquote cite,.vt-content ol>li::marker{font-family:var(--vt-font-display)!important}
+.vt-content dl.codebox code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace!important}
+.vt-content{font-weight:500}
