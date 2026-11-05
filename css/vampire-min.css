@@ -2709,3 +2709,15 @@ dl.vt-pv-row dd textarea.vt-input{width:100%!important}
 .vt-content table td{padding:.4rem .8rem;border:1px solid var(--vt-line)}
 .vt-content dl.codebox{background:var(--vt-surface2)!important}
 :root[data-theme="dark"] .vt-content dl.codebox{background:color-mix(in srgb,var(--vt-surface2) 85%,#000)!important}
+/* 68b. larger post text */
+.vt-content{font-size:1.1rem!important;line-height:1.8!important}
+.vt-content :is(a,li,p,span,div,td,dd,cite){font-size:inherit}
+.vt-content a{font-size:1em!important;font-weight:600}
+.vt-content blockquote{font-size:1em!important}
+.vt-content blockquote cite{font-size:.72rem!important}
+.vt-content dl.codebox code{font-size:.92rem!important}
+.vt-content dl.codebox dt{font-size:.72rem!important}
+.vt-content a.mentiontag{font-size:.95em}
+.vt-content h2.post-content{font-size:1.55rem!important}
+.vt-content h3.post-content{font-size:1.15rem!important}
+.vt-content h4.post-content{font-size:1.05rem!important}
