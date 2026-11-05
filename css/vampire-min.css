@@ -2770,3 +2770,16 @@ h1.vt-confirm-head{margin:0!important;padding:0!important;border:0!important;bac
 :root[data-theme="dark"] .vt-greet-title{color:var(--vt-gold-hot)}
 .vt-greet-title::after{content:"";display:block;width:3.2rem;height:2px;margin:.55rem auto 0;background:linear-gradient(90deg,transparent,var(--vt-gold),transparent)}
 .vt-greet-msg{font-size:1.1rem!important;text-align:center}
+
+/* 72. search_username popup (Find a username) */
+.vt-popup-form{display:flex;justify-content:center;width:100%;margin:0}
+.vt-popup-seal--find::before{-webkit-mask-image:var(--ic-search);mask-image:var(--ic-search)}
+.vt-popup-card--find{max-width:440px;text-align:center}
+h1.vt-find-title{margin:0!important;padding:0!important;border:0!important;background:none!important;color:var(--vt-blood)!important;font-family:var(--vt-font-display)!important;font-size:1.05rem!important;font-weight:800!important;letter-spacing:.16em;text-transform:uppercase}
+:root[data-theme="dark"] h1.vt-find-title{color:var(--vt-gold-hot)!important}
+.vt-find-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.6rem;width:100%;margin:0!important}
+.vt-find-row input.vt-input,.vt-find-select{box-sizing:border-box;flex:1 1 180px;width:auto!important;max-width:100%;min-width:0;padding:.55rem 1rem;border:1px solid var(--vt-line)!important;border-radius:999px 4px 999px 4px;background:var(--vt-surface2)!important;color:var(--vt-text)!important;font:inherit;font-size:.9rem}
+.vt-find-row input.vt-input:focus,.vt-find-select:focus{border-color:var(--vt-blood-hot)!important;box-shadow:0 0 0 3px var(--vt-glow);outline:0}
+.vt-find-row input.vt-btn{flex:none}
+.vt-find-hint{margin:0!important;color:var(--vt-muted)!important;font-size:.8rem;font-style:italic;line-height:1.5}
+.vt-find-hint .italic{font-style:italic}
