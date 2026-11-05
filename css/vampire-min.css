@@ -2521,3 +2521,7 @@ img.sprite-arrow_prosilver_up{display:inline-block;width:30px;height:30px;vertic
 .forabg ul.topiclist dd.lastpost{flex:none;width:11.5rem!important}
 .forabg li.header dd.lastpost{padding-left:0!important}
 .forabg li.row dd.dterm>img[src*="icon_participate"]{font-size:0;color:transparent}
+/* 62b. legacy "dl:after{visibility:hidden;height:0;clear:both}" clearfix hid the sigil icon on the live board */
+.forabg ul.topiclist li.row dl.icon::before,.forabg ul.topiclist li.row dl.icon::after{display:block!important;visibility:visible!important;opacity:1!important;float:none!important;clear:none!important;position:absolute!important;top:50%!important;overflow:visible;line-height:0;font-size:0}
+.forabg ul.topiclist li.row dl.icon::after{width:24px!important;height:24px!important;margin-top:-12px!important;left:calc(1.05rem + 11px)!important;background:var(--ic-fill)!important;-webkit-mask:var(--ic) center/contain no-repeat!important;mask:var(--ic) center/contain no-repeat!important}
+.forabg ul.topiclist li.row dl.icon::before{width:42px!important;height:48px!important;margin-top:-24px!important;left:calc(1.05rem + 2px)!important;background:var(--inner)!important}
