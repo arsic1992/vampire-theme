@@ -2755,3 +2755,10 @@ h1.vt-confirm-head{margin:0!important;padding:0!important;border:0!important;bac
 .vt-crypt--gallery .text_overlay .innerTitle,.vt-crypt--gallery .text_overlay .innerTitle>div{min-width:0!important;overflow:hidden;color:#fff!important;text-overflow:ellipsis;white-space:nowrap}
 .vt-crypt--gallery .text_overlay .innerTitle>div::before{content:"";display:inline-block;width:.6rem;height:.6rem;margin-right:.45rem;background:var(--vt-gold-hot);transform:rotate(45deg)}
 @media(hover:none){.vt-crypt--gallery .image_item .text_overlay{opacity:1;transform:none}}
+/* 70b. hover caption: legacy rules painted the overlay white; force the dark fade + visible text */
+.vt-crypt--gallery .image_item a.text_overlay,.vt-crypt--gallery .image_item:hover a.text_overlay{position:absolute!important;inset:auto 0 0 0!important;display:block!important;width:auto!important;height:auto!important;min-height:0!important;margin:0!important;padding:1.8rem .8rem .6rem!important;border:0!important;background:linear-gradient(180deg,transparent,rgba(14,3,6,.92) 55%)!important;background-color:transparent!important;color:#fff!important;text-align:left!important;box-shadow:none!important;filter:none!important}
+.vt-crypt--gallery .image_item a.text_overlay *{background:none!important;background-color:transparent!important;color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,.8);border:0!important;box-shadow:none!important}
+.vt-crypt--gallery .image_item a.text_overlay .innerTitle{display:block!important;height:auto!important;line-height:1.4!important;opacity:1!important;visibility:visible!important}
+.vt-crypt--gallery .image_item a.text_overlay .innerTitle>div{display:block!important;overflow:hidden;font-size:.78rem!important;text-overflow:ellipsis;white-space:nowrap;opacity:1!important;visibility:visible!important}
+.vt-crypt--gallery .image_item:hover a.text_overlay{opacity:1!important;visibility:visible!important;transform:none!important}
+.vt-crypt--gallery .image_item a.text_overlay::before,.vt-crypt--gallery .image_item a.text_overlay::after{content:none!important;display:none!important}
