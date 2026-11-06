@@ -2950,3 +2950,6 @@ dl.vt-field:hover a{color:var(--vt-blood-hot)!important}
 .panel:has(>.inner>h1.page-title:first-of-type+p>a)>.inner>p>a:first-of-type{background:linear-gradient(100deg,var(--vt-blood),var(--vt-blood-hot));border-color:var(--vt-blood);color:var(--vt-head-text)!important}
 .panel:has(>.inner>h1.page-title:first-of-type+p>a)>.inner>p>a:hover{transform:translateY(-2px);box-shadow:0 6px 16px var(--vt-glow);filter:brightness(1.1)}
 :root[data-theme="dark"] .panel:has(>.inner>h1.page-title:first-of-type+p>a)>.inner>p>a:first-of-type{border-color:var(--vt-blood);color:#fff!important}
+
+/* 80. notification dropdown: legacy <hr> separators */
+#notif_list hr,#live_notif hr,#vt-nav-right #notif_list li hr{display:none!important;height:0!important;margin:0!important;border:0!important;background:none!important}
