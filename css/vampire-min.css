@@ -2916,3 +2916,14 @@ dl.vt-field:hover a{color:var(--vt-blood-hot)!important}
 .vt-type-toggle label:has(input:checked){border-color:var(--vt-blood);background:linear-gradient(100deg,var(--vt-blood),var(--vt-blood-hot));color:var(--vt-head-text)!important;box-shadow:0 2px 10px var(--vt-glow)}
 .vt-type-toggle label:has(input:checked)::before{background:var(--vt-gold-hot);box-shadow:0 0 8px var(--vt-gold-hot)}
 .vt-type-toggle label:has(input:focus-visible){outline:2px solid var(--vt-gold);outline-offset:2px}
+
+/* 77. letter contact icons by image name */
+.vt-letter-contacts a{width:2.3rem;height:2.3rem}
+.vt-letter-contacts a::before{width:1.05rem;height:1.05rem;pointer-events:none}
+.vt-letter-contacts a:has(img[src*="profile"])::before{-webkit-mask-image:var(--ic-user);mask-image:var(--ic-user)}
+.vt-letter-contacts a:has(img[src*="email"])::before{-webkit-mask-image:var(--ic-mail);mask-image:var(--ic-mail)}
+.vt-letter-contacts a:has(img[src*="_pm"])::before{-webkit-mask-image:var(--ic-chat);mask-image:var(--ic-chat)}
+.vt-letter-contacts a:has(img[src*="www"])::before{-webkit-mask-image:var(--ic-globe);mask-image:var(--ic-globe)}
+:root[data-theme="dark"] .vt-letter-contacts a::before{background:var(--vt-gold-hot)}
+.vt-letter-contacts a:hover::before{background:var(--vt-blood-hot)}
+:root[data-theme="dark"] .vt-letter-contacts a:hover::before{background:#fff}
