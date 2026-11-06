@@ -2810,3 +2810,23 @@ h1.vt-find-title{margin:0!important;padding:0!important;border:0!important;backg
 .vt-poll fieldset.polls dl.vt-res-extra dd:empty{display:none}
 .vt-poll fieldset.polls dl.vt-res-extra:has(dd:empty){display:none}
 #hide_result_msg.vt-res-hidden{flex:1 1 100%;padding:.7rem 1rem;border:1px dashed var(--vt-gold);border-radius:4px 14px 4px 14px;background:var(--vt-surface2);color:var(--vt-muted);font-size:.86rem;font-style:italic;text-align:center}
+
+/* 74. viewonline_body ("who walks the night") */
+.vt-online-box,.vt-online-box>.inner{margin:0!important;padding:0!important;border:0!important;background:none!important;box-shadow:none!important}
+.vt-online-box .corners-top,.vt-online-box .corners-bottom{display:none!important}
+.vt-online-map{margin:0 0 1rem;overflow:hidden;border:1px solid var(--vt-line);border-radius:4px 18px 4px 18px;box-shadow:var(--vt-shadow)}
+.vt-online-map br{display:none}
+.vt-online-map iframe{display:block;width:100%}
+.vt-online-time,.vt-online-last{margin:0 0 .3rem;color:var(--vt-muted);font-size:.8rem;font-style:italic}
+.vt-online-guests{margin:-.4rem 0 .9rem;color:var(--vt-muted);font-size:.88rem}
+.vt-online .vt-c-name{min-width:9rem}
+.vt-online td.vt-c-name a{color:var(--vt-text);font-weight:700;text-decoration:none}
+.vt-online td.vt-c-name a:hover{color:var(--vt-blood-hot)}
+.vt-online td.vt-c-seen{width:1%;color:var(--vt-muted);font-size:.78rem;white-space:nowrap}
+.vt-online td.vt-c-where a{display:inline-flex;align-items:center;gap:.45rem;color:var(--vt-blood);font-size:.84rem;text-decoration:none}
+.vt-online td.vt-c-where a::before{content:"";flex:none;width:.8rem;height:.8rem;background:currentColor;-webkit-mask:var(--ic-eye) center/contain no-repeat;mask:var(--ic-eye) center/contain no-repeat}
+:root[data-theme="dark"] .vt-online td.vt-c-where a{color:var(--vt-gold-hot)}
+.vt-online td.vt-c-where a:hover{text-decoration:underline}
+.vt-on-bot td.vt-c-name{border-left-color:var(--vt-gold)!important;font-style:italic}
+.vt-on-guest td.vt-c-name{border-left-color:var(--vt-line)!important;color:var(--vt-muted)}
+.vt-online-explain{margin:.9rem 0;padding:.7rem 1rem;border:1px dashed var(--vt-gold);border-radius:4px 14px 4px 14px;background:var(--vt-surface2);color:var(--vt-muted);font-size:.84rem;font-style:italic}
